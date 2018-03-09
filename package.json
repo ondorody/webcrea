@@ -1,0 +1,16 @@
+{
+  "name": "facebotmsg",
+  "version": "1.0.0",
+  "description": "creer un bot facebook messenger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ONDO OBIANG RODOLF THERENCE",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
