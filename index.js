@@ -123,22 +123,22 @@ function sendGenericMessage(sender) {
                         "payload": "Ticket N°3",
                     }],
                 },  {
-                        "title": "Produits ",
-                    "subtitle": " Telechargeable ",
+                        "title": "Bon Plan ",
+                    "subtitle": " Produits ",
                     "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://play.google.com/store/apps/details?id=com.app.ecobank&hl=fr",
-                        "title": "Ecobank Mobile Banking", 
+                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
+                        "title": "Etudiant", 
                         
                     },{
                         "type": "web_url",
-                        "url": "https://play.google.com/store/apps/details?id=com.lamedis.boursify.corisbourse&hl=fr",
-                        "title": " Coris Bourse",
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
+                        "title": " Actif",
                     }, {
                         "type": "web_url",
-                        "url": "https://play.google.com/store/apps/details?id=com.uba.vericash&hl=fr ",
-                        "title": "UBA Mobile Banking",
+                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
+                        "title": "Retraité",
                     }],
                 }, {
                     "title": "Comparateur de Prix",
@@ -151,11 +151,11 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "postback",
                         "title": "Taux d'interet",
-                        "payload": "Coris Bank: A% SGBF: B%  UBA: C%",
+                        "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
                     }, {
                         "type": "postback",
-                        "title": "Credit",
-                        "payload": "Coris Bank: A SGBF: B  UBA: C",
+                        "title": "Pret Vehicule",
+                        "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
                     }],
                 }]  
             } 
