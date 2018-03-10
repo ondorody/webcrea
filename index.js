@@ -146,16 +146,16 @@ function sendGenericMessage(sender) {
                     "image_url": "http://img.over-blog-kiwi.com/1/53/19/45/20160510/ob_15306e_comparateur-legende.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Coris Bank",
-                        "payload": "Ouverture d'un compte epargne à partir de 10.000 fcfa",
+                        "title": "Ouverture de compte courant ",
+                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
                     }, {
                         "type": "postback",
-                        "title": "SGBF",
-                        "payload": "Ouvrir un compte courant est totalement gratuite à #SGBF",
+                        "title": "Taux d'interet",
+                        "payload": "Coris Bank: A% SGBF: B%  UBA: C%",
                     }, {
                         "type": "postback",
-                        "title": "UBA",
-                        "payload": "Ouverture d'un compte epargne à partir de 10.000 fcfa",
+                        "title": "Credit",
+                        "payload": "Coris Bank: A SGBF: B  UBA: C",
                     }],
                 }]  
             } 
