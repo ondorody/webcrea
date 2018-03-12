@@ -197,3 +197,10 @@ googleMapsClient.geocode({
         console.log(response.json.results);
     }
     });
+
+    <html lang="en">
+        <head>
+        <meta name="google-site-verification" content="fPYiWAH9m6BdhFZzBnd1up-lBEgV9y-ITDIPrfF-pSU" />
+        </head>
+    </html>
+    
