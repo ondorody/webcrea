@@ -91,19 +91,19 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "GAB disponible",
                     "subtitle": "Consultez",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/07/17/22/06/atm-1524870_960_720.jpg",
+                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601,-1505980,2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "Coris Bank"
+                        "title": "VISA"
                     }, {
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "UBA"
+                        "title": "Master Card"
                     },{
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
-                        "title": "Ecobank"
+                        "title": "American Express"
                     }],
                 }, {
                     "title": "Reservez un ticket",
@@ -123,8 +123,8 @@ function sendGenericMessage(sender) {
                         "payload": "Ticket N°3",
                     }],
                 },  {
-                        "title": "Bon Plan ",
-                    "subtitle": " Produits ",
+                        "title": "Produits Bancaire ",
+                    "subtitle": " Bon Plan ",
                     "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
                     "buttons": [{
                         "type": "web_url",
@@ -141,9 +141,9 @@ function sendGenericMessage(sender) {
                         "title": "Retraité",
                     }],
                 }, {
-                    "title": "Comparateur de Prix",
-                    "subtitle": "versus",
-                    "image_url": "http://img.over-blog-kiwi.com/1/53/19/45/20160510/ob_15306e_comparateur-legende.png",
+                    "title": "Faso Bank",
+                    "subtitle": "Comparateur de prix",
+                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
                     "buttons": [{
                         "type": "postback",
                         "title": "Ouverture de compte courant ",
@@ -154,7 +154,7 @@ function sendGenericMessage(sender) {
                         "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
                     }, {
                         "type": "postback",
-                        "title": "Pret Vehicule",
+                        "title": "Prérequis  d'ouverture d'un compte bancaire",
                         "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
                     }],
                 }]  
