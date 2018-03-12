@@ -197,4 +197,3 @@ googleMapsClient.geocode({
         console.log(response.json.results);
     }
     });
-<meta name="google-site-verification" content="fPYiWAH9m6BdhFZzBnd1up-lBEgV9y-ITDIPrfF-pSU" />
