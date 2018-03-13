@@ -226,4 +226,7 @@ function sendGenericMessage(sender) {
         },
         message,
         "broadcast");
-}''
+} ''
+{
+    "is_sent"; true
+}
