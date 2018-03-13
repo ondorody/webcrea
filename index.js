@@ -157,8 +157,6 @@ function sendGenericMessage(sender) {
                             "type": "postback",
                             "title": "Prérequis  d'ouverture d'un compte bancaire",
                             "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
-                    },{
-                    
                     }],
                 }]
             }
@@ -188,6 +186,3 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Headers:', JSON.stringify(response.headers));
     console.log('Response:', body);
 });
-
-
-
