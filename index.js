@@ -141,36 +141,6 @@ function sendGenericMessage(sender) {
                         "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
                         "title": "Retraité",
                     }],
-                    "content_type"; "user_phone_number"
-    
-    {
-                        "object"; "page",
-                        "entry";[
-                        {
-                            "id": "397612587366643",
-                            "time": 1502905976963,
-                            "messaging": [
-                                {
-                                    "sender": {
-                                        "id": "1254459154682919"
-                                    },
-                                    "recipient": {
-                                        "id": "682498171943165"
-                                    },
-                                    "timestamp": 1502905976377,
-                                    "message": {
-                                        "quick_reply": {
-                                            "payload": "<PHONE_NUMBER>"
-                                        },
-                                        "mid": "mid.$cAAJsujCd29DfHXKOOVd7C1F97Zto",
-                                        "seq": 9767,
-                                        "text": "<PHONE_NUMBER>"
-                                    }
-                                }
-                            ]
-                        }
-                        ]
-    }
 
                 }, {
                     "title": "Faso Bank",
