@@ -339,4 +339,4 @@ var cities = {
         properties: { name: '0°N 0°E' }
     }]
 
-    < iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=BANQUE&key=AIzaSyBYZQDnBdvoOwUmv9o_eXmd0oYypPvc-7s" allowfullscreen></iframe>
+   <HTMLAllCollection> < iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=BANQUE&key=AIzaSyBYZQDnBdvoOwUmv9o_eXmd0oYypPvc-7s" allowfullscreen></iframe>
