@@ -55,7 +55,7 @@ app.post('/webhook/', function (req, res) {
         }
     }
     res.sendStatus(200)
-})
+}
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
 
@@ -193,9 +193,6 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
 });
 
 //zone test 
-// End Point 2
-
-
 
 function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
