@@ -188,28 +188,5 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-function sendGenericMessage(sender) {
-    messageData = {
-        "payload": {
-            "template_type": "generic",
-            "elements": [
-                {
-                    "title": "Bonjour ma BANQUE",
-                    "image_url": "https://www.facebook.com/photo.php?fbid=1938548696428647&set=a.1460629700887218.1073741827.100008206064757&type=3&theater",
-                    "subtitle": "<SUBTITLE_TEXT>",
-                    "default_action": {
-                        "type": "web_url",
-                        "url": "https://www.facebook.com/photo.php?fbid=1938548696428647&set=a.1460629700887218.1073741827.100008206064757&type=3&theater",
 
-                    },
-                }
-                
-        
-                    } ,
-                }
-                        ]
-
-  
-} ' "https://graph.facebook.com/v2.6/me/messages?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
-                
-                       
+       
