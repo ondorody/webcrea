@@ -186,34 +186,13 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-<!DOCTYPE html>
+
     <html>
         <head>
-            <style>
-                #map {
-                    height: 400px;
-        width: 100%;
-       }
-    </style>
+            
+   
         </head>
         <body>
-            <h3>My Google Maps Demo</h3>
-            <div id="map"></div>
-            <script>
-                function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-                    position: uluru,
-          map: map
-        });
-      }
-    </script>
-            <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARj7YbiKz5v77ZzurXMDKyoRHCfqUKg34&callback=initMap">
-            </script>
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=ouagadougou&key=AIzaSyBYZQDnBdvoOwUmv9o_eXmd0oYypPvc-7s" allowfullscreen></iframe> 
         </body>
-    </html>
+    </html> 
