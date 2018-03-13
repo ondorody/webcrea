@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'News' || text === 'Start' || text === 'Go' || text === 'Nouveau') {
+            if (text === 'News' || text === 'Start' || text === 'Infos' || text === 'Nouveau') {
                 sendGenericMessaoge(sender)
                 continue
             }
