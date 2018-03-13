@@ -192,7 +192,7 @@ function sendGenericMessage(sender) {
     messageData = {
  "Content-Type: application/json" '{
 "recipient":{
-    "id":"<PSID>"
+    "id":"1261884793942876"
 },
         "message": {
             "attachment": {
