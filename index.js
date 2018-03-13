@@ -188,9 +188,9 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-https://graph.facebook.com/v2.6/me/messages?access_token=EAAR7rXLj81wBAPVadWFhRWqtKUDD68eKUWJ1ef2iAEgqvbedZBkJTa4ZBdkY97ZAjoX4otsxTZCwIh3bUHDtaf2bzlbDNa8QKl1jTevPkEhZC7ilLaIZCCF25nC8mW4T8RsHQ3ATYUbIQM24tYhjq31yQaK6NahqcdBN8tzi67ZBwZDZD
+https://graph.facebook.com/v2.6/me/messages?access_token=<EAAR7rXLj81wBAPVadWFhRWqtKUDD68eKUWJ1ef2iAEgqvbedZBkJTa4ZBdkY97ZAjoX4otsxTZCwIh3bUHDtaf2bzlbDNa8QKl1jTevPkEhZC7ilLaIZCCF25nC8mW4T8RsHQ3ATYUbIQM24tYhjq31yQaK6NahqcdBN8tzi67ZBwZDZD>
 
-"messaging_type"; "RESPONSE"
+"messaging_type"; "<RESPONSE>"
 "recipient";{
     "id";"<PSID>"
 }
