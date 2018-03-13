@@ -43,9 +43,9 @@ app.post('/webhook/', function (req, res) {
                 sendGenericMessage(sender)
                 continue
 
-            
-                if (text === 'Carte' || text === 'Map' || text === 'Start' || text === 'Go')
-                    sendGenericMessaoge(sender)
+            }
+            if (text === 'Carte' || text === 'Map' || text === 'Start' || text === 'Go') {
+                sendGenericMessaoge(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
@@ -61,11 +61,9 @@ app.post('/webhook/', function (req, res) {
             }
         }
         res.sendStatus(200)
+
     }
-
-
-
-
+')}'
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
 
