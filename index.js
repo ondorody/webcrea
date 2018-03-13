@@ -186,27 +186,51 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-//modules and variables
 var port = 8080;
 var http = require("http");
 var url = require("url");
 var fs = require("fs");
 
+var html = '<html><body>Text blablabla <img src="ouaga.png"></body></html>'
 
-//server
-fs.readFile('../web/www/map.html', function (err, html) {
-    if (err) {
-        throw err;
-    }
-    http.createServer(function (request, response) {
+http.createServer(function (request, response) {
+    let url = request.url
+
+    // on gere le cas de index.html
+    if (url === '/' || url === '/index.html') {
         response.writeHeader(200, { "Content-Type": "text/html" });
         response.write(html);
         response.end();
-    }).listen(port);
-});
+        return
+    }
 
-console.log('Server listenning on port', port);
+    // on gere le cas de ouaga.png
+    if (url === '/ouaga.png') {
+        fs.readFile('ouaga.png', function (err, content) {
+            if (err) {
+                response.writeHead(500, { "Content-Type": "text/plain" });
+                response.write("500 Internal Error");
+                response.end();
+                return
+            }
+            response.writeHeader(200, { "Content-Type": "image/png" });
+            response.write(content);
+            response.end();
+        });
+        return
+    }
 
+    // Sinon, la resource n'existe pas ?
+    response.writeHead(404, { "Content-Type": "text/plain" });
+    response.write("404 Not found");
+    response.end();
+
+    // Bien sûr, il faut pas faire comme ça
+    // on utilise fs.exist avec url pour verifié si le contenu est dispo dans le dossier public
+    // si oui : On lie le fichier et l'envoie a l'utilisateur
+    // sinon on retourne une erreur 404
+
+}).listen(port);
 
     
         
