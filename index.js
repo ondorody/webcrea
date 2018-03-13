@@ -186,6 +186,10 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
+var googleMapsClient = require('@google/maps').createClient({
+    key: 'AIzaSyBYZQDnBdvoOwUmv9o_eXmd0oYypPvc-7s'
+});
+
 function initialize() {
     var pyrmont = new google.maps.LatLng(-33.8665, 151.1956);
 
