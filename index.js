@@ -186,3 +186,37 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Headers:', JSON.stringify(response.headers));
     console.log('Response:', body);
 });
+
+function sendGenericMessage(sender) {
+    messageData = {
+        "content_type": "user_phone_number"
+    }
+    {
+        "object"; "page",
+            "entry";[
+                {
+                    "id": "397612587366643",
+                    "time": 1502905976963,
+                    "messaging": [
+                        {
+                            "sender": {
+                                "id": "1254459154682919"
+                            },
+                            "recipient": {
+                                "id": "682498171943165"
+                            },
+                            "timestamp": 1502905976377,
+                            "message": {
+                                "quick_reply": {
+                                    "payload": "<PHONE_NUMBER>"
+                                },
+                                "mid": "mid.$cAAJsujCd29DfHXKOOVd7C1F97Zto",
+                                "seq": 9767,
+                                "text": "<PHONE_NUMBER>"
+                            }
+                        }
+                    ]
+                }
+            ]
+    }
+}
