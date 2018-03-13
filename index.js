@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
-                sendGenericMessage(sender)
+                sendGenericMessaoge(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
@@ -55,7 +55,7 @@ app.post('/webhook/', function (req, res) {
             }
             if (event.postback) {
                 text = JSON.stringify(event.postback)
-                sendTextMessage(sender, "Postback received: " + text.substring(0, 200), token)
+                sendTextMessaoge(sender, "Postback received: " + text.substring(0, 200), token)
                 continue
             if (event.postback) {
                 text = JSON.stringify(event.postback)
@@ -276,19 +276,3 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-app.post('/webhook/', function (req, res) {
-    let messaging_events = req.body.entry[0].messaging
-    for (let i = 0; i < messaging_events.length; i++) {
-        let event = req.body.entry[0].messaging[i]
-        let sender = event.sender.id
-        if (event.message && event.message.text) {
-            let text = event.message.text
-            if (text === 'Generic') {
-                sendGenericMessaoge(sender)
-                continue
-            }
-            sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-        }
-    }
-    res.sendStatus(200)
-})
