@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Go' || text === 'Start' || text === 'Top' || text === 'ATM') {
+            if (text === 'News' || text === 'Start' || text === 'Go' || text === 'Nouveau') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -238,26 +238,26 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
+                    "title": "News 1",
                     "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
+                        "url": "https://www.facebook.com/opengab/",
                         "title": "web url"
                     }, {
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "title": "A la une ",
+                        "payload": "La Banque en ligne",
                     }],
                 }, {
-                    "title": "Second card",
+                    "title": "News 2",
                     "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
                     "buttons": [{
                         "type": "postback",
                         "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
+                        "payload": "SGBF en pleine croissance",
                     }],
                 }]
             }
