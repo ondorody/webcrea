@@ -186,7 +186,22 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
+var http = require('http');
+var fs = require('fs');
+var smiley = fs.readFileSync('ouaga.png');
 
+http.createServer(function (request, response) {
+    if (request.url.indexOf('ouaga.png') < 0) {
+        response.writeHead(200, { "Content-Type": "text/html" });
+        response.write('voici une image : <br/> <img src="ouaga.png" alt="ouaga face" height="469" width="469">  ');
+        response.end();
+    }
+    else {
+        response.writeHead(200, { "Content-Type": "image/png" });
+        response.write(smiley);
+        response.end();
+    }
+}).listen(8888);
 
     
         
