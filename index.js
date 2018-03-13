@@ -239,25 +239,25 @@ function sendGenericMessaoge(sender) {
                 "template_type": "generic",
                 "elements": [{
                     "title": "News 1",
-                    "subtitle": "Element #1 of an hscroll",
+                    "subtitle": "Flas infos",
                     "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/opengab/",
-                        "title": "web url"
+                        "title": "Visitez le site de ma banque"
                     }, {
                         "type": "postback",
                         "title": "A la une ",
-                        "payload": "La Banque en ligne",
+                        "payload": "Opengab créé la BlueMoney",
                     }],
                 }, {
                     "title": "News 2",
-                    "subtitle": "Element #2 of an hscroll",
+                    "subtitle": "Que vos ma banque ?  ",
                     "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "SGBF en pleine croissance",
+                        "title": "Réponse",
+                        "payload": "Voir l'image",
                     }],
                 }]
             }
