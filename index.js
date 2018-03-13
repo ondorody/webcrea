@@ -187,12 +187,5 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
 });
 
 
-    <html>
-        <head>
-            
-   
-        </head>
-        <body>
-            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=ouagadougou&key=AIzaSyBYZQDnBdvoOwUmv9o_eXmd0oYypPvc-7s" allowfullscreen></iframe> 
-        </body>
-    </html> 
+    
+        
