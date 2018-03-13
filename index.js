@@ -42,6 +42,8 @@ app.post('/webhook/', function (req, res) {
             if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
                 sendGenericMessage(sender)
                 continue
+            }
+
             if (text === 'Carte' || text === 'Map' || text === 'Start' || text === 'Go') {
                 sendGenericMessaoge(sender)
                 continue
@@ -50,16 +52,17 @@ app.post('/webhook/', function (req, res) {
         }
         if (event.postback) {
             text = JSON.stringify(event.postback)
-            sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+            sendTextMessage(sender, "Postback received: " + text.substring(0, 200), token)
             continue
-        if (event.postback) {
+            if (event.postback) {
                 text = JSON.stringify(event.postback)
                 sendTextMessaoge(sender, "Postback received: " + text.substring(0, 200), token)
-            continue
+                continue
+            }
         }
+        res.sendStatus(200)
     }
-    res.sendStatus(200)
-}
+  
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
 
