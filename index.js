@@ -189,4 +189,41 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
 });
 
 
-       
+ "Content-Type: application/json" '{
+"recipient":{
+    "id":"<PSID>"
+},
+"message":{
+    "attachment":{
+        "type":"template",
+            "payload":{
+            "template_type":"generic",
+                "elements":[
+                    {
+                        "title": "Welcome to Peter'\''s Hats",
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
+                        "subtitle": "We'\''ve got the right hat for everyone.",
+                        "default_action": {
+                            "type": "web_url",
+                            "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                        },
+                        "buttons": [
+                            {
+                                "type": "web_url",
+                                "url": "https://petersfancybrownhats.com",
+                                "title": "View Website"
+                            }, {
+                                "type": "postback",
+                                "title": "Start Chatting",
+                                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                            }
+                        ]
+                    }
+                ]
+        }
+    }
+}
+}' "https://graph.facebook.com/v2.6/me/messages?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
