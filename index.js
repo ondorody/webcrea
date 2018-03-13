@@ -197,7 +197,7 @@ http.createServer(function (request, response) {
     let url = request.url
 
     // on gere le cas de index.html
-    if (url === '/' || url === '/index.html') {
+    if (url === '/' || url === '/map.html') {
         response.writeHeader(200, { "Content-Type": "text/html" });
         response.write(html);
         response.end();
