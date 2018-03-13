@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
-                sendGenericMessaoge(sender)
+                sendGenericMessage(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
@@ -189,7 +189,30 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-//zone test
+//zone test 
+// End Point 2
+
+app.post('/webhook/', function (req, res) {
+    messaging_events = req.body.entry[0].messaging
+    for (i = 0; i < messaging_events.length; i++) {
+        event = req.body.entry[0].messaging[i]
+        sender = event.sender.id
+        if (event.message && event.message.text) {
+            text = event.message.text
+            if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
+                sendGenericMessaoge(sender)
+                continue
+            }
+            sendTextMessage(sender, "Bot: " + text.substring(0, 200))
+        }
+        if (event.postback) {
+            text = JSON.stringify(event.postback)
+            sendTextMessage(sender, "Postback received: " + text.substring(0, 200), token)
+            continue
+        }
+    }
+    res.sendStatus(200)
+})
 
 function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
