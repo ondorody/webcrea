@@ -189,6 +189,25 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
+function sendTextMessage(sender, text) {
+    let messageData = { text: text }
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: token },
+        method: 'POST',
+        json: {
+            recipient: { id: sender },
+            message: messageData,
+        }
+    }, function (error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+}
+
 function sendGenericMessage(sender) {
     let messageData = {
         "attachment": {
@@ -196,37 +215,44 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "I took Peter's 'Which Hat Are You?' Quiz",
-                    "image_url": "https://bot.peters-hats.com/img/hats/fez.jpg",
-                    "subtitle": "My result: Fez",
-                    "default_action": {
-                        "type": "web_url",
-                        "url": "https://bot.peters-hats.com/view_quiz_results.php?user=24601"
-                    },
+                    "title": "First card",
+                    "subtitle": "Element #1 of an hscroll",
+                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://bot.peters-hats.com/hatquiz.php?referer=24601",
-                        "title": "Take the Quiz"
-                    }]
+                        "url": "https://www.messenger.com",
+                        "title": "web url"
+                    }, {
+                        "type": "postback",
+                        "title": "Postback",
+                        "payload": "Payload for first element in a generic bubble",
+                    }],
+                }, {
+                    "title": "Second card",
+                    "subtitle": "Element #2 of an hscroll",
+                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "Postback",
+                        "payload": "Payload for second element in a generic bubble",
+                    }],
                 }]
             }
         }
-    };
-
-    MessengerExtensions.beginShareFlow(function (share_response) {
-        // User dismissed without error, but did they share the message?
-        if (share_response.is_sent) {
-            // The user actually did share. 
-            // Perhaps close the window w/ requestCloseBrowser().
+    }
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: token },
+        method: 'POST',
+        json: {
+            recipient: { id: sender },
+            message: messageData,
         }
-    },
-        function (errorCode, errorMessage) {
-            // An error occurred in the process
-
-        },
-        message,
-        "broadcast");
-} ''
-{
-    "is_sent"; true
+    }, function (error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
 }
