@@ -96,6 +96,7 @@ function sendGenericMessage(sender) {
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
                         "title": "VISA"
+                                            
                     }, {
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
@@ -156,6 +157,7 @@ function sendGenericMessage(sender) {
                         "type": "postback",
                         "title": "Prérequis  d'ouverture d'un compte bancaire",
                         "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
+                        
                     }],
                 }]  
             } 
@@ -186,51 +188,24 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-var port = 8080;
-var http = require("http");
-var url = require("url");
-var fs = require("fs");
-
-var html = '<html><body>Text blablabla <img src="ouaga.png"></body></html>'
-
-http.createServer(function (request, response) {
-    let url = request.url
-
-    // on gere le cas de index.html
-    if (url === '/' || url === '/map.html') {
-        response.writeHeader(200, { "Content-Type": "text/html" });
-        response.write(html);
-        response.end();
-        return
-    }
-
-    // on gere le cas de ouaga.png
-    if (url === '/ouaga.png') {
-        fs.readFile('ouaga.png', function (err, content) {
-            if (err) {
-                response.writeHead(500, { "Content-Type": "text/plain" });
-                response.write("500 Internal Error");
-                response.end();
-                return
-            }
-            response.writeHeader(200, { "Content-Type": "image/png" });
-            response.write(content);
-            response.end();
-        });
-        return
-    }
-
-    // Sinon, la resource n'existe pas ?
-    response.writeHead(404, { "Content-Type": "text/plain" });
-    response.write("404 Not found");
-    response.end();
-
-    // Bien sûr, il faut pas faire comme ça
-    // on utilise fs.exist avec url pour verifié si le contenu est dispo dans le dossier public
-    // si oui : On lie le fichier et l'envoie a l'utilisateur
-    // sinon on retourne une erreur 404
-
-}).listen(port);
-
-    
-        
+function sendGenericMessage(sender) {
+    messageData = { 
+        "payload": {
+            "template_type": "generic",
+            "elements": [
+                {
+                    "title": "Bonjour ma BANQUE",
+                    "image_url": "https://www.facebook.com/photo.php?fbid=1938548696428647&set=a.1460629700887218.1073741827.100008206064757&type=3&theater",
+                    "subtitle": "<SUBTITLE_TEXT>",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "https://www.facebook.com/photo.php?fbid=1938548696428647&set=a.1460629700887218.1073741827.100008206064757&type=3&theater",
+                        "messenger_extensions": <TRUE | FALSE >,
+                        "webview_height_ratio": "<COMPACT | TALL | FULL>"
+                    } ,
+                    "buttons": [<BUTTON_OBJECT>, ...]      
+    },
+    ...
+  ]
+} 
+                        }
