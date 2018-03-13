@@ -189,7 +189,7 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
-function sendTextMessage(sender, text) {
+function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -208,7 +208,7 @@ function sendTextMessage(sender, text) {
     })
 }
 
-function sendGenericMessage(sender) {
+function sendGenericMessaoge(sender) {
     let messageData = {
         "attachment": {
             "type": "template",
