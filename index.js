@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
-                sendGenericMessage(sender)
+                sendGenericMessaoge(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
@@ -188,6 +188,8 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Headers:', JSON.stringify(response.headers));
     console.log('Response:', body);
 });
+
+//zone test
 
 function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
