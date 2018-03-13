@@ -45,13 +45,13 @@ app.post('/webhook/', function (req, res) {
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
 
-            if (event.message && event.message.text) {
-                text = event.message.text
-                if (text === 'Go' || text === 'Burkina' || text === 'Bot' || text === 'Action') {
-                    sendGenericMessaoge(sender)
-                    continue
-                }
-                sendTextMessaoge(sender, "Bot: " + text.substring(0, 200))
+        if (event.message && event.message.text) {
+            text = event.message.text
+            if (text === 'Go' || text === 'Burkina' || text === 'Bot' || text === 'Action') {
+                sendGenericMessaoge(sender)
+                continue
+            }
+            sendTextMessaoge(sender, "Bot: " + text.substring(0, 200))
             }
             if (event.postback) {
                 text = JSON.stringify(event.postback)
