@@ -189,6 +189,7 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
+function sendGenericMessage(sender) {
 let messageData = {
     "attachment": {
         "type": "template",
