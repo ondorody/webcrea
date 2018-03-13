@@ -186,6 +186,26 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
     console.log('Response:', body);
 });
 
+//modules and variables
+var port = 8080;
+var http = require("http");
+var url = require("url");
+var fs = require("fs");
+
+
+//server
+fs.readFile('../web/www/map.html', function (err, html) {
+    if (err) {
+        throw err;
+    }
+    http.createServer(function (request, response) {
+        response.writeHeader(200, { "Content-Type": "text/html" });
+        response.write(html);
+        response.end();
+    }).listen(port);
+});
+
+console.log('Server listenning on port', port);
 
 
     
