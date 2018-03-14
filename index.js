@@ -285,7 +285,7 @@ function sendGenericMessaoge(sender) {
 
 'use strict';
 
-const request = require('request')
+var request = require('request')
 
 class MessengerProfile {
     constructor(token, options = {}) {
@@ -355,7 +355,7 @@ class MessengerProfile {
 
 module.exports = MessengerProfile
 
-const
+var
     getStartedButton = require('../json/fb-get-started-button.json'),
     greetingText = require('../json/fb-greeting-text.json'),
     persistentMenu = require('../json/fb-persistent-menu.json')
