@@ -1,19 +1,6 @@
 {
-   "data": [
-        {
-          "whitelisted_domains": [
-            "https://facebook.com/"
-          ],
-          "greeting": [
-            {
-              "locale": "default",
-              "text": "Hello!"
-            },
-            {
-               "locale": "en_FR",
-               "text": "Bonjour bienvenu."
-            }
-         ]
-      }
-   ]
+  "setting_type": "greeting",
+  "greeting": {
+    "text": "Your greeting text here."
+  }
 }
