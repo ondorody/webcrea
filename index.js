@@ -279,41 +279,11 @@ function sendGenericMessaoge(sender) {
         }
     })
 }
-// Mesage de bienvenu 
-
-function sendTextMessage(sender, text) {
-   let messageData = {
-        text: text
-    }
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=' + process.env.FB_PAGE_ACCESS_TOKEN,
-        qs: { access_token: token },
-        method: 'POST',
-        json: {
-            recipient: { id: sender },
-            message: messageData,
-        }
-    }, function (error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    })
-}
 
 // Calls the Facebook graph api to change various bot settings
 function facebookThreadAPI(jsonFile, cmd) {
     let messageData = {
-        "greeting": [
-            {
-                "locale": "default",
-                "text": "Hello!"
-            }, {
-                "locale": "en_US",
-                "text": "Timeless apparel for the masses."
-            }
-        ]
+        text: text
     }
     // Start the request
     request({
