@@ -280,3 +280,12 @@ function sendGenericMessaoge(sender) {
     })
 }
 
+"greeting";[
+    {
+        "locale": "default",
+        "text": "Hello!"
+    }, {
+        "locale": "en_US",
+        "text": "Timeless apparel for the masses."
+    }
+]
