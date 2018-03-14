@@ -1,4 +1,3 @@
-// Just using the menu to do a single button admin reset
 {
   "setting_type" : "call_to_actions",
   "thread_state" : "existing_thread",
