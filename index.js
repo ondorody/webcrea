@@ -280,7 +280,7 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-https://graph.facebook.com/v2.6/<PAGE_ID>/thread_settings?access_token=<PAGE_ACCESS_TOKEN>
+
 
 var request = require('request');
 
