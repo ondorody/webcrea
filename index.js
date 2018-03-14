@@ -283,7 +283,7 @@ function sendGenericMessaoge(sender) {
 
 
 // Calls the Facebook graph api to change various bot settings
-function sendGenericMessage(jsonFile, cmd) {
+function facebookThreadAPI(jsonFile, cmd) {
     let messageData = {
         "greeting": [
             {
