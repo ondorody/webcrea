@@ -282,14 +282,40 @@ function sendGenericMessaoge(sender) {
 
 
 // Calls the Facebook graph api to change various bot settings
+
 function facebookThreadAPI(jsonFile, cmd) {
-    {
-        "setting_type"; "greeting",
-            "greeting";{
-            "text";"Your greeting text here."
-        }
+        let messageData = { text: text }
+        request({
+            url: 'https://graph.facebook.com/v2.6/me/messages',
+            qs: { access_token: token },
+            method: 'POST',
+            json: {
+                recipient: { id: sender },
+                message: messageData,
+            }
+        }, function (error, response, body) {
+            if (error) {
+                console.log('Error sending messages: ', error)
+            } else if (response.body.error) {
+                console.log('Error: ', response.body.error)
+            }
+        })
     }
-    // Start the request
+
+function facebookThreadAPI(sender) {
+    let messageData = {
+        "greeting": [
+            {
+                "locale": "default",
+                "text": "Hello!"
+            }, {
+                "locale": "en_US",
+                "text": "Timeless apparel for the masses."
+            }
+        ]
+    } 
+    }
+    
     request({
         url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD',
         method: 'POST',
@@ -307,5 +333,6 @@ function facebookThreadAPI(jsonFile, cmd) {
                 console.log(body);
             }
         });
-}
+
+
 
