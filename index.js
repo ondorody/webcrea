@@ -295,6 +295,12 @@ var request = require('request');
 
 // Calls the Facebook graph api to change various bot settings
 function facebookThreadAPI(jsonFile, cmd) {
+    "greeting";[
+        {
+            "locale": "default",
+            "text": "Hello {{user_first_name}}!"
+        }
+    ]
     // Start the request
     request({
         url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAFIRqcAjvEZBMmuzqWSFAs7Bu1BOeTbSANJUquZB9Erz0YZByE0gUFZCLPC4QTDfKk0WZBjQl3zIEGl3eAZCIHzdeMvIcQ6wMk7JUz2XwSsNJ1AmgJvlpXDwNTxtkjue9uoAqfFWMT4bvW199nXkOm9IWWEHZCtjAZDZD' + process.env.FB_PAGE_ACCESS_TOKEN,
