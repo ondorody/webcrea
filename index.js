@@ -174,12 +174,11 @@ function sendGenericMessage(sender) {
                         "type": "postback",
                         "title": "Taux d'interet",
                         "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
-                        }, {
-                            "type": "postback",
-                            "title": "Prérequis  d'ouverture d'un compte bancaire",
-                            "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
-                    "get_started": { "payload": "<postback_payload>" }
-
+                    }, {
+                        "type": "postback",
+                        "title": "Prérequis  d'ouverture d'un compte bancaire",
+                        "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
+                    
                     }],
                 }]
             }
