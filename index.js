@@ -280,36 +280,6 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-var request = require('request');
-
-
-facebookThreadAPI('./fb-greeting-text.json', 'Greating Text');
-
-facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
-
-facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
-
-function facebookThreadAPI(jsonFile, cmd) {
-
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAFIRqcAjvEZBMmuzqWSFAs7Bu1BOeTbSANJUquZB9Erz0YZByE0gUFZCLPC4QTDfKk0WZBjQl3zIEGl3eAZCIHzdeMvIcQ6wMk7JUz2XwSsNJ1AmgJvlpXDwNTxtkjue9uoAqfFWMT4bvW199nXkOm9IWWEHZCtjAZDZD' + process.env.FB_PAGE_ACCESS_TOKEN,
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        form: require(jsonFile)
-    },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                // Print out the response body
-                console.log(cmd + ": Updated.");
-                console.log(body);
-            } else {
-                // TODO: Handle errors
-                console.log(cmd + ": Failed. Need to handle errors.");
-                console.log(body);
-            }
-        });
-}
-
 
 // suite 
 
@@ -384,3 +354,20 @@ class MessengerProfile {
 }
 
 module.exports = MessengerProfile
+
+const
+    getStartedButton = require('../json/fb-get-started-button.json'),
+    greetingText = require('../json/fb-greeting-text.json'),
+    persistentMenu = require('../json/fb-persistent-menu.json')
+
+module.exports = {
+    id: 'default',
+    name: 'default',
+    dialog: (session, args) => {
+        let profile = new MessengerProfile(process.env.FACEBOOK_PAGE_ACCESS_TOKEN, {
+            greetingText, getStartedButton, persistentMenu
+        })
+
+        session.send('Hello there');
+    }
+};
