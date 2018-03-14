@@ -280,7 +280,6 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-var request = require('request');
 
 //=========================================================
 // Facebook setup // Run only when need updating.
