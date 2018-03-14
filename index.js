@@ -283,91 +283,37 @@ function sendGenericMessaoge(sender) {
 
 // suite 
 
-'use strict';
+var request = require('request');
 
-var request = require('request')
+//=========================================================
+// Facebook setup // Run only when need updating.
+//=========================================================
 
-class MessengerProfile {
-    constructor(token, options = {}) {
-        this.token = token
-        this.version = options.version || 'v2.9'
-        this.greetingText = options.greetingText
-        this.getStartedButton = options.getStartedButton
-        this.persistentMenu = options.persistentMenu
-        this.whitelistedDomains = options.whitelistedDomains
+// Set FB bot greeting text
+facebookThreadAPI('./fb-greeting-text.json', 'Greating Text');
+// Set FB bot get started button
+facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
+// Set FB bot persistent menu
+facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
 
-        this.ID_GREETING_TEXT = "Greeting Text"
-        this.ID_GET_STARTED_BUTTON = "Get Started Button"
-        this.ID_PERSISTENT_MENU = "Persistent Menu"
-        this.ID_WHITELISTED_DOMAINS = "Domain Whitelisting"
-
-        if (this.greetingText) {
-            this.threadSetup(this.ID_GREETING_TEXT, this.greetingText)
-        }
-        if (this.getStartedButton) {
-            this.threadSetup(this.ID_GET_STARTED_BUTTON, this.getStartedButton)
-        }
-        if (this.persistentMenu) {
-            this.threadSetup(this.ID_PERSISTENT_MENU, this.persistentMenu)
-        }
-        if (this.whitelistedDomains) {
-            this.threadSetup(this.ID_WHITELISTED_DOMAINS, this.whitelistDomains)
-        }
-    }
-
-    setGreetingText(json) {
-        this.greetingText = json
-        this.threadSetup(this.ID_GREETING_TEXT, this.greetingText)
-    }
-
-    setGetStartedButton(json) {
-        this.getStartedButton = json
-        this.threadSetup(this.ID_GET_STARTED_BUTTON, this.getStartedButton)
-    }
-
-    setPersistentMenu(json) {
-        this.persistentMenu = json
-        this.threadSetup(this.ID_PERSISTENT_MENU, this.persistentMenu)
-    }
-
-    whitelistDomains(json) {
-        this.whitelistDomains = json
-        this.threadSetup(this.ID_WHITELISTED_DOMAINS, this.whitelistDomains)
-    }
-
-    threadSetup(id, json) {
-        // Start the request
-        request({
-            url: `https://graph.facebook.com/${this.version}/me/messenger_profile?access_token=${this.token}`,
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            form: json
-        }, (error, response, body) => {
-
+// Calls the Facebook graph api to change various bot settings
+function facebookThreadAPI(jsonFile, cmd) {
+    // Start the request
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=' + process.env.FB_PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: require(jsonFile)
+    },
+        function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log(`Updated ${id} ${body}`);
+                // Print out the response body
+                console.log(cmd + ": Updated.");
+                console.log(body);
             } else {
-                console.log(`Failed ${id} ${body} Error ${error}`);
+                // TODO: Handle errors
+                console.log(cmd + ": Failed. Need to handle errors.");
+                console.log(body);
             }
-        })
-    }
+        });
 }
-
-module.exports = MessengerProfile
-
-var
-    getStartedButton = require('../json/fb-get-started-button.json'),
-    greetingText = require('../json/fb-greeting-text.json'),
-    persistentMenu = require('../json/fb-persistent-menu.json')
-
-module.exports = {
-    id: 'default',
-    name: 'default',
-    dialog: (session, args) => {
-        let profile = new MessengerProfile(process.env.FACEBOOK_PAGE_ACCESS_TOKEN, {
-            greetingText, getStartedButton, persistentMenu
-        })
-
-        session.send('Hello there');
-    }
-};
