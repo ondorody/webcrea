@@ -179,6 +179,17 @@ function sendGenericMessage(sender) {
                             "title": "Prérequis  d'ouverture d'un compte bancaire",
                             "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
 
+                            "greeting":[
+                            {
+                                "locale": "default",
+                                "text": "Hello!"
+                            }, {
+                                "locale": "en_US",
+                                "text": "Timeless apparel for the masses."
+                            }
+                            ]
+                            
+
                     }],
                 }]
             }
@@ -280,12 +291,4 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-"greeting";[
-    {
-        "locale": "default",
-        "text": "Hello!"
-    }, {
-        "locale": "en_US",
-        "text": "Timeless apparel for the masses."
-    }
-]
+
