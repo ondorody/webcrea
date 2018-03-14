@@ -280,6 +280,7 @@ function sendGenericMessaoge(sender) {
     })
 }
 
+var request = require('request');
 
 //=========================================================
 // Facebook setup // Run only when need updating.
@@ -296,7 +297,7 @@ function sendGenericMessaoge(sender) {
 function facebookThreadAPI(jsonFile, cmd) {
     // Start the request
     request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=' + process.env.FB_PAGE_ACCESS_TOKEN,
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAFIRqcAjvEZBMmuzqWSFAs7Bu1BOeTbSANJUquZB9Erz0YZByE0gUFZCLPC4QTDfKk0WZBjQl3zIEGl3eAZCIHzdeMvIcQ6wMk7JUz2XwSsNJ1AmgJvlpXDwNTxtkjue9uoAqfFWMT4bvW199nXkOm9IWWEHZCtjAZDZD' + process.env.FB_PAGE_ACCESS_TOKEN,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         form: require(jsonFile)
