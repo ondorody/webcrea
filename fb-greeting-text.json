@@ -1,6 +1,13 @@
 {
-  "setting_type":"greeting",
-  "greeting":{  
-    "text":"Your greeting text here."
-  }
+  "setting_type": "greeting",
+  "greeting": [
+    {
+      "locale": "default",
+      "text": "Hello!"
+    },
+    {
+      "locale": "en_US",
+      "text": "Timeless apparel for the masses."
+    }
+  ]
 }
