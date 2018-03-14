@@ -281,28 +281,9 @@ function sendGenericMessaoge(sender) {
 }
 
 
+
 // Calls the Facebook graph api to change various bot settings
-
-function facebookThreadAPI(jsonFile, cmd) {
-        let messageData = { text: text }
-        request({
-            url: 'https://graph.facebook.com/v2.6/me/messages',
-            qs: { access_token: token },
-            method: 'POST',
-            json: {
-                recipient: { id: sender },
-                message: messageData,
-            }
-        }, function (error, response, body) {
-            if (error) {
-                console.log('Error sending messages: ', error)
-            } else if (response.body.error) {
-                console.log('Error: ', response.body.error)
-            }
-        })
-    }
-
-function facebookThreadAPI(sender) {
+function sendGenericMessage(jsonFile, cmd) {
     let messageData = {
         "greeting": [
             {
@@ -313,11 +294,10 @@ function facebookThreadAPI(sender) {
                 "text": "Timeless apparel for the masses."
             }
         ]
-    } 
     }
-    
+    // Start the request
     request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD',
+        url: 'https://graph.facebook.com/v2.6/me/messages' ,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         form: require(jsonFile)
@@ -333,6 +313,4 @@ function facebookThreadAPI(sender) {
                 console.log(body);
             }
         });
-
-
-
+}
