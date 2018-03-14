@@ -309,3 +309,78 @@ function facebookThreadAPI(jsonFile, cmd) {
             }
         });
 }
+
+
+// suite 
+
+'use strict';
+
+const request = require('request')
+
+class MessengerProfile {
+    constructor(token, options = {}) {
+        this.token = token
+        this.version = options.version || 'v2.9'
+        this.greetingText = options.greetingText
+        this.getStartedButton = options.getStartedButton
+        this.persistentMenu = options.persistentMenu
+        this.whitelistedDomains = options.whitelistedDomains
+
+        this.ID_GREETING_TEXT = "Greeting Text"
+        this.ID_GET_STARTED_BUTTON = "Get Started Button"
+        this.ID_PERSISTENT_MENU = "Persistent Menu"
+        this.ID_WHITELISTED_DOMAINS = "Domain Whitelisting"
+
+        if (this.greetingText) {
+            this.threadSetup(this.ID_GREETING_TEXT, this.greetingText)
+        }
+        if (this.getStartedButton) {
+            this.threadSetup(this.ID_GET_STARTED_BUTTON, this.getStartedButton)
+        }
+        if (this.persistentMenu) {
+            this.threadSetup(this.ID_PERSISTENT_MENU, this.persistentMenu)
+        }
+        if (this.whitelistedDomains) {
+            this.threadSetup(this.ID_WHITELISTED_DOMAINS, this.whitelistDomains)
+        }
+    }
+
+    setGreetingText(json) {
+        this.greetingText = json
+        this.threadSetup(this.ID_GREETING_TEXT, this.greetingText)
+    }
+
+    setGetStartedButton(json) {
+        this.getStartedButton = json
+        this.threadSetup(this.ID_GET_STARTED_BUTTON, this.getStartedButton)
+    }
+
+    setPersistentMenu(json) {
+        this.persistentMenu = json
+        this.threadSetup(this.ID_PERSISTENT_MENU, this.persistentMenu)
+    }
+
+    whitelistDomains(json) {
+        this.whitelistDomains = json
+        this.threadSetup(this.ID_WHITELISTED_DOMAINS, this.whitelistDomains)
+    }
+
+    threadSetup(id, json) {
+        // Start the request
+        request({
+            url: `https://graph.facebook.com/${this.version}/me/messenger_profile?access_token=${this.token}`,
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            form: json
+        }, (error, response, body) => {
+
+            if (!error && response.statusCode == 200) {
+                console.log(`Updated ${id} ${body}`);
+            } else {
+                console.log(`Failed ${id} ${body} Error ${error}`);
+            }
+        })
+    }
+}
+
+module.exports = MessengerProfile
