@@ -281,52 +281,52 @@ function sendGenericMessaoge(sender) {
 }
 
 // message de bienvenue
-
-function sendTextMessagew(sender, text) {
-    let messageData = { text: text }
+// Calls the Facebook graph api to change various bot settings
+function facebookThreadAPI(jsonFile, cmd) {
+    // Start the request
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: { access_token: token },
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD',
         method: 'POST',
-        json: {
-            recipient: { id: sender },
-            message: messageData,
-        }
-    }, function (error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    })
-}
-
-function sendGenericMessagew(sender) {
-    let messageData = {
-        "greeting": [
-            {
-                "locale": "default",
-                "text": "Hello!"
-            }, {
-                "locale": "en_US",
-                "text": "Timeless apparel for the masses."
+        headers: { 'Content-Type': 'application/json' },
+        form: require(jsonFile)
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                console.log(cmd + ": Updated.");
+                console.log(body);
+            } else {
+                // TODO: Handle errors
+                console.log(cmd + ": Failed. Need to handle errors.");
+                console.log(body);
             }
-        ]
-    
+        });
 }
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: { access_token: token },
-        method: 'POST',
-        json: {
-            recipient: { id: sender },
-            message: messageData,
-        }
-    }, function (error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    })
+
+{
+    "setting_type":"greeting",
+        "greeting":{
+        "text":"Your greeting text here."
+    }
+}
+{
+    "setting_type":"call_to_actions",
+        "thread_state":"new_thread",
+            "call_to_actions":[
+                {
+                    "payload": "action?POSTBACKHERE"
+                }
+            ]
+}
+// Just using the menu to do a single button admin reset
+{
+    "setting_type" : "call_to_actions",
+        "thread_state" : "existing_thread",
+            "call_to_actions":[
+                {
+                    "type": "postback",
+                    "title": "Admin Reset",
+                    "payload": "action?POSTBACKHERE"
+                }
+            ]
 }
