@@ -287,7 +287,25 @@ var request = require('request');
 //=========================================================
 
 // Set FB bot greeting text
- facebookThreadAPI('./fb-greeting-text.json', 'Greating Text');
+function facebookThreadAPI() {
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAFIRqcAjvEZBMmuzqWSFAs7Bu1BOeTbSANJUquZB9Erz0YZByE0gUFZCLPC4QTDfKk0WZBjQl3zIEGl3eAZCIHzdeMvIcQ6wMk7JUz2XwSsNJ1AmgJvlpXDwNTxtkjue9uoAqfFWMT4bvW199nXkOm9IWWEHZCtjAZDZD' + process.env.FB_PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: require(jsonFile)
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                console.log(cmd + ": Updated.");
+                console.log(body);
+            } else {
+                // TODO: Handle errors
+                console.log(cmd + ": Failed. Need to handle errors.");
+                console.log(body);
+            }
+        });
+}
 // Set FB bot get started button
  facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
 // Set FB bot persistent menu
