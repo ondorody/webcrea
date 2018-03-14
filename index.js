@@ -317,7 +317,7 @@ function facebookThreadAPI(jsonFile, cmd) {
     }
     // Start the request
     request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD' ,
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=' + process.env.FB_PAGE_ACCESS_TOKEN,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         form: require(jsonFile)
