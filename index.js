@@ -280,7 +280,7 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-// message de bienvenue
+
 // Calls the Facebook graph api to change various bot settings
 function facebookThreadAPI(jsonFile, cmd) {
     // Start the request
@@ -303,30 +303,3 @@ function facebookThreadAPI(jsonFile, cmd) {
         });
 }
 
-{
-    "setting_type":"greeting",
-        "greeting":{
-        "text":"Your greeting text here."
-    }
-}
-{
-    "setting_type":"call_to_actions",
-        "thread_state":"new_thread",
-            "call_to_actions":[
-                {
-                    "payload": "action?POSTBACKHERE"
-                }
-            ]
-}
-// Just using the menu to do a single button admin reset
-{
-    "setting_type" : "call_to_actions",
-        "thread_state" : "existing_thread",
-            "call_to_actions":[
-                {
-                    "type": "postback",
-                    "title": "Admin Reset",
-                    "payload": "action?POSTBACKHERE"
-                }
-            ]
-}
