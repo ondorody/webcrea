@@ -280,18 +280,17 @@ function sendGenericMessaoge(sender) {
     })
 }
 
-var request = require('request');
 
 //=========================================================
 // Facebook setup // Run only when need updating.
 //=========================================================
 
 // Set FB bot greeting text
-facebookThreadAPI('./fb-greeting-text.json', 'Greating Text');
+ facebookThreadAPI('./fb-greeting-text.json', 'Greating Text');
 // Set FB bot get started button
-facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
+ facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
 // Set FB bot persistent menu
-facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
+ facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
 
 // Calls the Facebook graph api to change various bot settings
 function facebookThreadAPI(jsonFile, cmd) {
