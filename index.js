@@ -282,7 +282,7 @@ function sendGenericMessaoge(sender) {
 // Mesage de bienvenu 
 
 function sendTextMessage(sender, text) {
-    messageData = {
+   let messageData = {
         text: text
     }
     request({
