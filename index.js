@@ -282,7 +282,7 @@ function sendGenericMessaoge(sender) {
 
 // message de bienvenue
 
-function sendTextMessage(sender, text) {
+function sendTextMessagew(sender, text) {
     let messageData = { text: text }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -301,15 +301,19 @@ function sendTextMessage(sender, text) {
     })
 }
 
-function sendGenericMessage(sender) {
+function sendGenericMessagew(sender) {
     let messageData = {
         "greeting": [
             {
                 "locale": "default",
-                "text": "Hello {{user_first_name}}!"
+                "text": "Hello!"
+            }, {
+                "locale": "en_US",
+                "text": "Timeless apparel for the masses."
             }
         ]
-    }
+    
+}
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: token },
