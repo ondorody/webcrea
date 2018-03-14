@@ -1,13 +1,19 @@
 {
-  "setting_type": "greeting",
-  "greeting": [
-    {
-      "locale": "default",
-      "text": "Hello!"
-    },
-    {
-      "locale": "en_US",
-      "text": "Timeless apparel for the masses."
-    }
-  ]
+   "data": [
+        {
+          "whitelisted_domains": [
+            "https://facebook.com/"
+          ],
+          "greeting": [
+            {
+              "locale": "default",
+              "text": "Hello!"
+            },
+            {
+               "locale": "en_US",
+               "text": "Timeless apparel for the masses."
+            }
+         ]
+      }
+   ]
 }
