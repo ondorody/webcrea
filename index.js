@@ -280,4 +280,15 @@ function sendGenericMessaoge(sender) {
     })
 }
 
+curl - X POST - H "Content-Type: application/json" - d '{
+"greeting": [
+    {
+        "locale": "default",
+        "text": "Hello!"
+    }, {
+        "locale": "en_US",
+        "text": "Timeless apparel for the masses."
+    }
+]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
 
