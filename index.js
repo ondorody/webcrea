@@ -105,7 +105,10 @@ function sendTextMessage(sender, text) {
 function sendGenericMessage(sender) {
     let messageData = { 
         "get_started": {
-            "payload":"<GET_STARTED_PAYLOAD>",
+            "payload": "<GET_STARTED_PAYLOAD>",
+            
+        "result": "Successfully updated greeting"
+    }
                        }
                       }
     let messageData = {
@@ -282,26 +285,5 @@ function sendGenericMessaoge(sender) {
             console.log('Error: ', response.body.error)
         }
     })
-}
-
-// suite
-function facebookThreadAPI(jsonFile, cmd) {
-request({
-    url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD' + process.env.FB_PAGE_ACCESS_TOKEN,
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    form: require(jsonFile)
-},
-    function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            // Print out the response body
-            console.log(cmd + ": Updated.");
-            console.log(body);
-        } else {
-            // TODO: Handle errors
-            console.log(cmd + ": Failed. Need to handle errors.");
-            console.log(body);
-        }
-    });
 }
 
