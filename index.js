@@ -103,11 +103,11 @@ function sendTextMessage(sender, text) {
 // Two cards.
 
 function sendGenericMessage(sender) {
-    let Data = { 
+    let messageData = { 
         "get_started": {
               "payload":"<GET_STARTED_PAYLOAD>"
                        }
-               }
+                      }
     let messageData = {
         "attachment": {
             "type": "template",
