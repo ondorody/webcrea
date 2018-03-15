@@ -178,7 +178,11 @@ function sendGenericMessage(sender) {
                         "type": "postback",
                         "title": "Prérequis  d'ouverture d'un compte bancaire",
                         "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
-                    
+                    { 
+                        "get_started": {
+                            "payload": "<GET_STARTED_PAYLOAD>"
+                        }
+                    }
                     }],
                 }]
             }
