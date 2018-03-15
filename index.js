@@ -103,7 +103,12 @@ function sendTextMessage(sender, text) {
 // Two cards.
 
 function sendGenericMessage(sender) {
-   let messageData = {
+    let messageData = { 
+        "get_started": {
+    "payload":"<GET_STARTED_PAYLOAD>"
+        }
+}
+    let messageData = {
         "attachment": {
             "type": "template",
             "payload": {
@@ -178,11 +183,6 @@ function sendGenericMessage(sender) {
                         "type": "postback",
                         "title": "Prérequis  d'ouverture d'un compte bancaire",
                         "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
-                    { 
-                        "get_started": {
-                            "payload": "<GET_STARTED_PAYLOAD>"
-                        }
-                    }
                     }],
                 }]
             }
