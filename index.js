@@ -100,7 +100,7 @@ function sendTextMessage(sender, text) {
 }
 
 
-// Two cards.
+// Carte des GAB en focntion des type de carte de credit
 
 function sendGenericMessage(sender) {
     let messageData = {
@@ -207,6 +207,8 @@ function sendTextMessaoge(sender, text) {
         }
     })
 }
+
+// reseau des Bank du Burkina Faso
 
 function sendGenericMessaoge(sender) {
     let messageData = {
