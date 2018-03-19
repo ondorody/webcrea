@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB' || text === 'Bonjour' || text === 'bonjour' || text === 'Banque') {
+            if (text === 'Mastercard' || text === 'Demarrer' || text === 'Visa' || text === 'GAB' || text === 'Bonjour' || text === 'Maestro' || text === 'American Express' || text === 'Discover Network' || text === 'Diners Club International' || text === 'AFFN' || text === 'Unionpay' || text === 'Hello' || text === 'VISA' || text === 'Gab') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'News' || text === 'Start' || text === 'Infos' || text === 'Nouveau') {
+            if (text === 'Banque' || text === 'UBA' || text === 'Uba' || text === 'uba' || text === 'banque' || text === 'bank' || text === 'Bank') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -109,75 +109,53 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "GAB disponible",
-                    "subtitle": "Consultez",
-                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
+                    "title": "Besoin d'argent ?",
+                    "subtitle": "Reseau des GAB de ouaga",
+                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
                         "title": "VISA"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "Master Card"
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Master Card "
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
                         "title": "American Express"
+
                     }],
                 }, {
-                    "title": "Reservez un ticket",
-                    "subtitle": "Choisir sa banque",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/12/13/17/18/fax-1904644_960_720.jpg",
-                    "buttons": [{
-                        "type": "postback",
-                        "title": "Coris Bank",
-                        "payload": "Ticket N°1",
-                    }, {
-                        "type": "postback",
-                        "title": "UBA",
-                        "payload": "Ticket N°2",
-                    }, {
-                        "type": "postback",
-                        "title": "Ecobank",
-                        "payload": "Ticket N°3",
-                    }],
-                }, {
-                    "title": "Produits Bancaire ",
-                    "subtitle": " Bon Plan ",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
+                    "title": "Plus de Carte  ",
+                    "subtitle": "Dispo 7/7",
+                    "image_url": "https://i.ytimg.com/vi/Bs_PoK6vOno/maxresdefault_live.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
-                        "title": "Etudiant",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Diners Club International"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": " Actif",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Maestro"
                     }, {
                         "type": "web_url",
-                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
-                        "title": "Retraité",
-                    }],
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "AFFN"
 
+                    }],
                 }, {
-                    "title": "Faso Bank",
-                    "subtitle": "Comparateur de prix",
-                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
+
+                    "title": "GAB ",
+                    "subtitle": "Disponible 24h/24h",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png",
                     "buttons": [{
-                        "type": "postback",
-                        "title": "Ouverture de compte courant ",
-                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
-                    }, {
-                        "type": "postback",
-                        "title": "Taux d'interet",
-                        "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
-                    }, {
-                        "type": "postback",
-                        "title": "Prérequis  d'ouverture d'un compte bancaire",
-                        "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
+                        "type": "web_url",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "title": "UnionPay"
+
                     }],
                 }]
             }
@@ -237,31 +215,33 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "News 1",
-                    "subtitle": "Flas infos",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
+                    "title": "UBA",
+                    "subtitle": "Vous etes une banque ? Votre Produit ici",
+                    "image_url": "http://www.leconomistedufaso.bf/wp-content/uploads/2017/02/BM_UBA_Red.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.facebook.com/opengab/",
-                        "title": "Visitez le site de ma banque"
+                        "url": "https://i0.wp.com/netafrique.net/wp-content/uploads/2018/01/uba.jpg?fit=650%2C393",
+                        "title": "Carte du Siege"
                     }, {
-                        "type": "postback",
-                        "title": "A la une ",
-                        "payload": "Opengab créé la BlueMoney",
-                    }],
+                        "type": "web_url",
+                        "url": "http://lesechosdufaso.net/communique-de-uba-comptes-dormants/",
+                        "title": "Client de 8ans"
+                    }]
                 }, {
-                    "title": "News 2",
-                    "subtitle": "Que vos ma banque ?  ",
-                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
+                    "title": "UBA Africards",
+                    "subtitle": "Telephone",
+                    "image_url": "https://lbs-ci.com/wp-content/uploads/2016/09/carte-africard.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Réponse",
-                        "payload": "Voir l'image",
+                        "title": "Tél:25 30 15 75 ",
+                        "payload": "Merci de nous avoir contactez",
                     }],
                 }]
             }
         }
     }
+        
+                    
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: token },
@@ -279,3 +259,104 @@ function sendGenericMessaoge(sender) {
     })
 }
 
+
+
+// text pour message d'accueil 
+
+
+
+//=========================================================
+// Facebook setup // Run only when need updating.
+//=========================================================
+
+
+
+// Calls the Facebook graph api to change various bot settings
+function facebookThreadAPI(jsonFile, cmd) {
+   
+    // Set FB bot greeting text
+    facebookThreadAPI('./fb-greeting-text.json', 'Greeting Text');
+    // Set FB bot get started button
+    facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
+    // Set FB bot persistent menu
+    facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
+    // Start the request
+    var request = require('request');
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD'+process.env.FB_PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: require(jsonFile)
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                console.log(cmd + ": Updated.");
+                console.log(body);
+            } else {
+                // TODO: Handle errors
+                console.log(cmd + ": Failed. Need to handle errors.");
+                console.log(body);
+            }
+        });
+}
+
+app.post('/webhook', function (req, res) {
+var data = req.body;
+
+// Make sure this is a page subscription
+if (data.object === 'page') {
+
+    // Iterate over each entry - there may be multiple if batched
+    data.entry.forEach(function(entry) {
+    var pageID = entry.id;
+    var timeOfEvent = entry.time;
+
+    // Iterate over each messaging event
+    entry.messaging.forEach(function(event) {
+        if (event.message) {
+        receivedMessage(event);
+        } else {
+        console.log("Webhook received unknown event: ", event);
+        }
+    });
+    });
+
+    res.sendStatus(200);
+}
+});
+
+function receivedMessage(event) {
+    var senderID = event.sender.id;
+    var recipientID = event.recipient.id;
+    var timeOfMessage = event.timestamp;
+    var message = event.message;
+    var messageId = message.mid;
+    var messageText = message.text;
+    var messageAttachments = message.attachments;
+    if (messageText) {
+        var msg = "Hi ,I'm LocationBot ,and I was created to echo back your latitude and longitude coordinates " +
+            "You just need to send me your location  \n" +
+            "Using the send location button on messenger (only available on mobile devices) \n" +
+
+        switch (messageText) {
+            case 'getstarted':
+                sendTextMessage(senderID, msg);
+            default:
+                sendTextMessage(senderID, msg);
+        }
+
+    } else if (messageAttachments) {
+        var lat = null;
+        var long = null;
+        if (messageAttachments[0].payload.coordinates) {
+            lat = messageAttachments[0].payload.coordinates.lat;
+            long = messageAttachments[0].payload.coordinates.long;
+        }
+
+        var msg = "lat : " + lat + " ,long : " + long + "\n";
+
+        sendTextMessage(senderID, msg);
+
+    }
+}
