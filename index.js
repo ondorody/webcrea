@@ -301,28 +301,3 @@ function facebookThreadAPI(jsonFile, cmd) {
         });
 }
 
-app.post('/webhook', function (req, res) {
-var data = req.body;
-
-// Make sure this is a page subscription
-if (data.object === 'page') {
-
-    // Iterate over each entry - there may be multiple if batched
-    data.entry.forEach(function(entry) {
-    var pageID = entry.id;
-    var timeOfEvent = entry.time;
-
-    // Iterate over each messaging event
-    entry.messaging.forEach(function(event) {
-        if (event.message) {
-        receivedMessage(event);
-        } else {
-        console.log("Webhook received unknown event: ", event);
-        }
-    });
-    });
-
-    res.sendStatus(200);
-}
-});
-
