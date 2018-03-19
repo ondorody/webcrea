@@ -217,7 +217,7 @@ function sendGenericMessaoge(sender) {
                 "elements": [{
                     "title": "Bank Burkina Faso",
                     "subtitle": "Top 3",
-                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
+                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://societegenerale.bf/fr/",
