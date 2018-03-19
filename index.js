@@ -215,13 +215,13 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "Besoin d'argent ?",
-                    "subtitle": "Reseau des GAB de ouaga",
-                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
+                    "title": "Vous cherchez une Bank ?",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://societegenerale.bf/fr/",
-                        "title": "SGBF"
+                        "url": "https://www.ecobank.com/bf/personal-banking",
+                        "title": "Ecobank"
 
                     }, {
                         "type": "web_url",
@@ -234,13 +234,13 @@ function sendGenericMessaoge(sender) {
 
                     }],
                 }, {
-                    "title": "Plus de Carte  ",
-                    "subtitle": "Dispo 7/7",
-                    "image_url": "https://i.ytimg.com/vi/Bs_PoK6vOno/maxresdefault_live.jpg",
+                    "title": "Explorez les Bank du Faso ",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "https://www.lespharaons.com/wp-content/uploads/2017/09/cfa-2-1.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.ecobank.com/bf/personal-banking",
-                        "title": "Ecobank"
+                        "url": "http://societegenerale.bf/fr/",
+                        "title": "SGBF"
 
                     }, {
                         "type": "web_url",
@@ -254,9 +254,9 @@ function sendGenericMessaoge(sender) {
                     }],
                 }, {
 
-                    "title": "GAB ",
-                    "subtitle": "Disponible 24h/24h",
-                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png",
+                    "title": "Encore plus de Bank  ",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "http://www.planetecampus.com/wp-content/uploads/2017/04/cfa.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.banqueatlantique.net/bf/",
