@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Banque' || text === 'UBA' || text === 'Uba' || text === 'uba' || text === 'banque' || text === 'bank' || text === 'Bank') {
+            if (text === 'Bank Burkina ' || text === 'UBA' || text === 'Coris' || text === 'BOA' || text === 'SGBF' || text === 'EcoBank' || text === 'Banque Burkina Faso ' || text === 'Banque faso ' || text === 'Bank BF ') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -215,22 +215,22 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "UBA",
-                    "subtitle": "Vous etes une banque ? Votre Produit ici",
-                    "image_url": "http://www.leconomistedufaso.bf/wp-content/uploads/2017/02/BM_UBA_Red.jpg",
+                    "title": "Bank Burkina Faso",
+                    "subtitle": "Top 3",
+                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://i0.wp.com/netafrique.net/wp-content/uploads/2018/01/uba.jpg?fit=650%2C393",
-                        "title": "Carte du Siege"
+                        "url": "http://societegenerale.bf/fr/",
+                        "title": "SGBF"
                     }, {
                         "type": "web_url",
-                        "url": "http://lesechosdufaso.net/communique-de-uba-comptes-dormants/",
-                        "title": "Client de 8ans"
+                        "url": "http://www.coris-bank.com/",
+                        "title": "Coris Bank"
                     }]
                 }, {
-                    "title": "UBA Africards",
+                    "title": "UBA",
                     "subtitle": "Telephone",
-                    "image_url": "https://lbs-ci.com/wp-content/uploads/2016/09/carte-africard.png",
+                    "image_url": "https://www.ubagroup.com/countries/bf",
                     "buttons": [{
                         "type": "postback",
                         "title": "Tél:25 30 15 75 ",
@@ -326,37 +326,3 @@ if (data.object === 'page') {
 }
 });
 
-function receivedMessage(event) {
-    var senderID = event.sender.id;
-    var recipientID = event.recipient.id;
-    var timeOfMessage = event.timestamp;
-    var message = event.message;
-    var messageId = message.mid;
-    var messageText = message.text;
-    var messageAttachments = message.attachments;
-    if (messageText) {
-        var msg = "Hi ,I'm LocationBot ,and I was created to echo back your latitude and longitude coordinates " +
-            "You just need to send me your location  \n" +
-            "Using the send location button on messenger (only available on mobile devices) \n" +
-
-        switch (messageText) {
-            case 'getstarted':
-                sendTextMessage(senderID, msg);
-            default:
-                sendTextMessage(senderID, msg);
-        }
-
-    } else if (messageAttachments) {
-        var lat = null;
-        var long = null;
-        if (messageAttachments[0].payload.coordinates) {
-            lat = messageAttachments[0].payload.coordinates.lat;
-            long = messageAttachments[0].payload.coordinates.long;
-        }
-
-        var msg = "lat : " + lat + " ,long : " + long + "\n";
-
-        sendTextMessage(senderID, msg);
-
-    }
-}
