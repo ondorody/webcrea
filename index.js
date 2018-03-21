@@ -178,13 +178,7 @@ function sendGenericMessage(sender) {
     })
 }
 
-var request = require('request');
 
-request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN2FAVZ847EY3OR2G6WI1K94&ip=68.10.149.45', function (error, response, body) {
-    console.log('Status:', response.statusCode);
-    console.log('Headers:', JSON.stringify(response.headers));
-    console.log('Response:', body);
-});
 
 //zone test 
 
