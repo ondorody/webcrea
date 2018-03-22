@@ -282,13 +282,9 @@ function sendGenericMessaoge(sender) {
                         "url": "https://www.cbao.sn/fr/succursales-filiales",
                         "title": "CBAO"
                     }, {
-                            "title": "View",
                             "type": "web_url",
                             "url": "http://www.bdu-bf.com/",
-                            "messenger_extensions": true,
-                            "webview_height_ratio": "tall",
-                            "fallback_url": "http://www.bdu-bf.com/"
-
+                            "title": "BDU-BF"
                     }],
                 }]
             }
