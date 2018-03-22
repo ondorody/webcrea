@@ -299,6 +299,12 @@ function sendGenericMessaoge(sender) {
   // teste mesage welcome
 
 
+var mongoose = require("mongoose");
+
+var db = mongoose.connect(process.env.MONGODB_URI);
+var Movie = require("./models/movie");
+
+
 
 // Server index page
 app.get("/", function (req, res) {
