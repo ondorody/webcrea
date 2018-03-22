@@ -394,7 +394,7 @@ function setupPersistentMenu(res) {
         };
     // Start the request
     request({
-        url: "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAL2s4XGAxv0pjVbKKrZAG7qANFGKvvNC5k8qLWdf907PZBu1KNBldiccK5LlY8zSbuorboH25VnsgSDbKTelpjVc74lAOvmazcSXVzU7GrkGcYl8ZBGHZBMPSdez1AWmgNcttq3J7GifmWI8vI7KVZAYvDF1IIwZDZD",
+        url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAL2s4XGAxv0pjVbKKrZAG7qANFGKvvNC5k8qLWdf907PZBu1KNBldiccK5LlY8zSbuorboH25VnsgSDbKTelpjVc74lAOvmazcSXVzU7GrkGcYl8ZBGHZBMPSdez1AWmgNcttq3J7GifmWI8vI7KVZAYvDF1IIwZDZD',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         form: messageData
@@ -421,7 +421,7 @@ function setupGetStartedButton(res) {
     };
     // Start the request
     request({
-        url: "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAL2s4XGAxv0pjVbKKrZAG7qANFGKvvNC5k8qLWdf907PZBu1KNBldiccK5LlY8zSbuorboH25VnsgSDbKTelpjVc74lAOvmazcSXVzU7GrkGcYl8ZBGHZBMPSdez1AWmgNcttq3J7GifmWI8vI7KVZAYvDF1IIwZDZD",
+        url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAL2s4XGAxv0pjVbKKrZAG7qANFGKvvNC5k8qLWdf907PZBu1KNBldiccK5LlY8zSbuorboH25VnsgSDbKTelpjVc74lAOvmazcSXVzU7GrkGcYl8ZBGHZBMPSdez1AWmgNcttq3J7GifmWI8vI7KVZAYvDF1IIwZDZD',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         form: messageData
