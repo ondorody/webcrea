@@ -420,32 +420,3 @@ function setupGetStartedButton(res) {
         });
 }
 
-// autre tentative de message de bienvenu
-
-request({
-    method: 'POST',
-    uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: {
-        access_token: ACCESS_TOKEN
-    },
-    json: {
-        recipient: {
-            id: SENDER_ID
-        },
-        message: {
-            attachment: {
-                type: "template",
-                payload: {
-                    template_type: "generic",
-                    elements: {
-                        "title": "Your Title",
-                        "subtitle": "Welcome to my messenger bot",
-                        "image_url": "https://mybot.example.com/images/logo.jpg"
-                    }
-                }
-            }
-        }
-    }
-}, (err, res, body) => {
-    // Deal with the response
-});
