@@ -315,6 +315,17 @@ function sendGenericMessaoge(sender) {
 
 
 // text pour message d'accueil 
+
+//Put any token here like your password for example 
+const FACEBOOK_VERIFY_CODE = '0123456789';
+
+app.get('/webhook/', function (req, res) {
+    if (req.query['hub.verify_token'] === FACEBOOK_VERIFY_CODE) {
+        res.send(req.query['hub.challenge'])
+    }
+    res.send('Error : wrong token');
+
+})
 app.get('/setup', function (req, res) {
 
     setupGetStartedButton(res);
