@@ -375,7 +375,24 @@ function sendTextMessaioge(sender, text) {
     })
 }
 
-function sendGenericMessaioge(sender) {
+function receivedMessage(event) {
+    var senderID = event.sender.id;
+    var recipientID = event.recipient.id;
+    var timeOfMessage = event.timestamp;
+    var message = event.message.text;
+    let text = event.message.text
+    text = text || "";
+    var messageText = "Hello Seed";
+    var messageData = {
+        recipient: { id: senderID },
+        message: { text: messageText }
+    };
+    callSendAPI(messageData);
+
+
+}
+
+function receivedMessage(sender) {
     let messageData =
         {
             "recipient": {
