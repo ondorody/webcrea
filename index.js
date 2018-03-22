@@ -29,6 +29,13 @@ app.listen(app.get('port'), function() {
     console.log('running on port', app.get('port'))
 })
 
+app.get('/setup', function (req, res) {
+
+    setupGetStartedButton(res);
+    setupPersistentMenu(res);
+    setupGreetingText(res);
+});
+
 
 // End Point
 
@@ -73,25 +80,6 @@ app.post('/webhook/', function (req, res) {
     }
     res.sendStatus(200)
 
-    messaging_events = req.body.entry[0].messaging
-    for (i = 0; i < messaging_events.length; i++) {
-        event = req.body.entry[0].messaging[i]
-        sender = event.sender.id
-        if (event.message && event.message.text) {
-            text = event.message.text
-            if (text === 'Bonus' || text === 'Surprise') {
-                sendTextMessaioge(sender)
-                continue
-            }
-            sendTextMessage(sender, "Bot: " + text.substring(0, 200))
-        }
-        if (event.postback) {
-            text = JSON.stringify(event.postback)
-            sendTextMessage(sender, "Postback received: " + text.substring(0, 200), token)
-            continue
-        }
-    }
-    res.sendStatus(200)
 })
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
@@ -316,21 +304,7 @@ function sendGenericMessaoge(sender) {
 
 // text pour message d'accueil 
 
-//Put any token here like your password for example 
-const FACEBOOK_VERIFY_CODE = 'Gracedivine2018!';
 
-app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === FACEBOOK_VERIFY_CODE) {
-        res.send(req.query['hub.challenge'])
-    }
-    res.send('Error : wrong token');
-})
-app.get('/setup', function (req, res) {
-
-    setupGetStartedButton(res);
-    setupPersistentMenu(res);
-    setupGreetingText(res);
-});
 
 
 function setupGreetingText(res) {
