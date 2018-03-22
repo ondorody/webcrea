@@ -325,16 +325,14 @@ app.get('/setup', function (req, res) {
 
 function setupGreetingText(res) {
     var messageData = {
-        "greeting": [
+        "setting_type": "call_to_actions",
+        "thread_state": "new_thread",
+        "call_to_actions": [
             {
-                "locale": "default",
-                "text": "Greeting text for default local !"
-            }, {
-                "locale": "en_US",
-                "text": "Greeting text for en_US local !"
+                "payload": "Greeting"
             }
         ]
-    };
+    }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD' + PAGE_ACCESS_TOKEN,
         method: 'POST',
