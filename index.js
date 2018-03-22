@@ -355,7 +355,7 @@ function facebookThreadAPI(jsonFile, cmd) {
         });
 }
 
-// new template
+// new template test 
 
 function sendTextMessaioge(sender, text) {
     let messageData = { text: text }
@@ -380,7 +380,7 @@ function sendGenericMessaioge(sender) {
     let messageData =
         {
             "recipient": {
-                "id": "RECIPIENT_ID"
+                "id": "1254477777772919"
             },
             "message": {
                 "attachment": {
