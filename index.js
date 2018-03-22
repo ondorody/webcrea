@@ -72,6 +72,26 @@ app.post('/webhook/', function (req, res) {
         }
     }
     res.sendStatus(200)
+
+    messaging_events = req.body.entry[0].messaging
+    for (i = 0; i < messaging_events.length; i++) {
+        event = req.body.entry[0].messaging[i]
+        sender = event.sender.id
+        if (event.message && event.message.text) {
+            text = event.message.text
+            if (text === 'Bonus' || text === 'Surprise') {
+                sendGenericMessaioge(sender)
+                continue
+            }
+            sendTextMessage(sender, "Bot: " + text.substring(0, 200))
+        }
+        if (event.postback) {
+            text = JSON.stringify(event.postback)
+            sendTextMessage(sender, "Postback received: " + text.substring(0, 200), token)
+            continue
+        }
+    }
+    res.sendStatus(200)
 })
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
@@ -335,3 +355,115 @@ function facebookThreadAPI(jsonFile, cmd) {
         });
 }
 
+// new template
+
+function sendTextMessaioge(sender, text) {
+    let messageData = { text: text }
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: token },
+        method: 'POST',
+        json: {
+            recipient: { id: sender },
+            message: messageData,
+        }
+    }, function (error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+}
+
+function sendGenericMessaioge(sender) {
+    let messageData =
+        {
+            "recipient": {
+                "id": "RECIPIENT_ID"
+            },
+            "message": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "list",
+                        "top_element_style": "compact",
+                        "elements": [
+                            {
+                                "title": "Classic T-Shirt Collection",
+                                "subtitle": "See all our colors",
+                                "image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",
+                                "buttons": [
+                                    {
+                                        "title": "View",
+                                        "type": "web_url",
+                                        "url": "https://peterssendreceiveapp.ngrok.io/collection",
+                                        "messenger_extensions": true,
+                                        "webview_height_ratio": "tall",
+                                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Classic White T-Shirt",
+                                "subtitle": "See all our colors",
+                                "default_action": {
+                                    "type": "web_url",
+                                    "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+                                    "messenger_extensions": false,
+                                    "webview_height_ratio": "tall"
+                                }
+                            },
+                            {
+                                "title": "Classic Blue T-Shirt",
+                                "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+                                "subtitle": "100% Cotton, 200% Comfortable",
+                                "default_action": {
+                                    "type": "web_url",
+                                    "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+                                    "messenger_extensions": true,
+                                    "webview_height_ratio": "tall",
+                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                                },
+                                "buttons": [
+                                    {
+                                        "title": "Shop Now",
+                                        "type": "web_url",
+                                        "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+                                        "messenger_extensions": true,
+                                        "webview_height_ratio": "tall",
+                                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                                    }
+                                ]
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "title": "View More",
+                                "type": "postback",
+                                "payload": "payload"
+                            }
+                        ]
+                    }
+                }
+            }
+
+        }
+
+
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: token },
+        method: 'POST',
+        json: {
+            recipient: { id: sender },
+            message: messageData,
+        }
+    }, function (error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+}
