@@ -80,7 +80,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             if (text === 'Bonus' || text === 'Surprise') {
-                sendGenericMessaioge(sender)
+                sendTextMessaioge(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
@@ -315,44 +315,126 @@ function sendGenericMessaoge(sender) {
 
 
 // text pour message d'accueil 
+app.get('/setup', function (req, res) {
+
+    setupGetStartedButton(res);
+    setupPersistentMenu(res);
+    setupGreetingText(res);
+});
 
 
-
-//=========================================================
-// Facebook setup // Run only when need updating.
-//=========================================================
-
-
-
-// Calls the Facebook graph api to change various bot settings
-function facebookThreadAPI(jsonFile, cmd) {
-   
-    // Set FB bot greeting text
-    facebookThreadAPI('./fb-greeting-text.json', 'Greeting Text');
-    // Set FB bot get started button
-    facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
-    // Set FB bot persistent menu
-    facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
-    // Start the request
-    var request = require('request');
+function setupGreetingText(res) {
+    var messageData = {
+        "greeting": [
+            {
+                "locale": "default",
+                "text": "Greeting text for default local !"
+            }, {
+                "locale": "en_US",
+                "text": "Greeting text for en_US local !"
+            }
+        ]
+    };
     request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD'+process.env.FB_PAGE_ACCESS_TOKEN,
+        url: 'https://graph.facebook.com/v2.6/me/messenger_profile?access_token=' + PAGE_ACCESS_TOKEN,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        form: require(jsonFile)
+        form: messageData
     },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 // Print out the response body
-                console.log(cmd + ": Updated.");
-                console.log(body);
+                res.send(body);
+
             } else {
                 // TODO: Handle errors
-                console.log(cmd + ": Failed. Need to handle errors.");
-                console.log(body);
+                res.send(body);
             }
         });
+
 }
+
+function setupPersistentMenu(res) {
+    var messageData =
+        {
+            "persistent_menu": [
+                {
+                    "locale": "default",
+                    "composer_input_disabled": true,
+                    "call_to_actions": [
+                        {
+                            "title": "Info",
+                            "type": "nested",
+                            "call_to_actions": [
+                                {
+                                    "title": "Help",
+                                    "type": "postback",
+                                    "payload": "HELP_PAYLOAD"
+                                },
+                                {
+                                    "title": "Contact Me",
+                                    "type": "postback",
+                                    "payload": "CONTACT_INFO_PAYLOAD"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "web_url",
+                            "title": "Visit website ",
+                            "url": "http://www.techiediaries.com",
+                            "webview_height_ratio": "full"
+                        }
+                    ]
+                },
+                {
+                    "locale": "zh_CN",
+                    "composer_input_disabled": false
+                }
+            ]
+        };
+    // Start the request
+    request({
+        url: "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=" + PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: messageData
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                res.send(body);
+
+            } else {
+                // TODO: Handle errors
+                res.send(body);
+            }
+        });
+
+}
+
+
+function setupGetStartedButton(res) {
+    var messageData = {
+        "get_started": {
+            "payload": "getstarted"
+        }
+    };
+    // Start the request
+    request({
+        url: "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=" + PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: messageData
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                res.send(body);
+
+            } else {
+                // TODO: Handle errors
+                res.send(body);
+            }
 
 // new template test 
 
@@ -375,24 +457,9 @@ function sendTextMessaioge(sender, text) {
     })
 }
 
-function receivedMessage(event) {
-    var senderID = event.sender.id;
-    var recipientID = event.recipient.id;
-    var timeOfMessage = event.timestamp;
-    var message = event.message.text;
-    let text = event.message.text
-    text = text || "";
-    var messageText = "Hello Seed";
-    var messageData = {
-        recipient: { id: senderID },
-        message: { text: messageText }
-    };
-    callSendAPI(messageData);
 
 
-}
-
-function receivedMessage(sender) {
+function sendTextMessaioge(sender) {
     let messageData =
         {
             "recipient": {
