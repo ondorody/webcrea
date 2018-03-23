@@ -297,6 +297,13 @@ function sendGenericMessaoge(sender) {
 
 // Message de bienvenu et menu persistat + boutton demarrer
 
+app.get('/setup', function (req, res) {
+
+    setupGetStartedButton(res);
+    setupPersistentMenu(res);
+    setupGreetingText(res);
+});
+
 function setupGreetingText(res) {
     var messageData = {
         "greeting": [
