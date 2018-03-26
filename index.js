@@ -138,7 +138,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "Plus de Carte  ",
                     "subtitle": "Dispo 7/7",
-                    "image_url": "https://i.ytimg.com/vi/Bs_PoK6vOno/maxresdefault_live.jpg",
+                    "image_url": "https://cdn.pixabay.com/photo/2017/10/05/18/00/atm-2820328_960_720.png",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
