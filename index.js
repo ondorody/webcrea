@@ -4,7 +4,6 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-var cloudinary = require('cloudinary')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -288,13 +287,4 @@ function sendGenericMessaoge(sender) {
         }
     })
     
-    cloudinary.config({ 
-  cloud_name: 'sample', 
-  api_key: '336175118632385', 
-  api_secret: 'EE5Y3k47bO3L5AwUJ_DMRR-Bzyw' 
-});
-    
-cloudinary.uploader.upload("http://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png", function(result) { 
-  console.log(result) 
-});
 }
