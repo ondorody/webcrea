@@ -287,4 +287,36 @@ function sendGenericMessaoge(sender) {
         }
     })
     
+    const client = filestack.init('ARVNFDkIFTCy2nOXvYSoLz'); 
+
+let options = {
+  "displayMode": "inline",
+  "container": ".picker-content",
+  "maxFiles": 4,
+  "accept": [
+    "image/*",
+    "application/pdf"
+  ],
+  "storeTo": {
+    "container": "devportal-customers-assets",
+    "path": "user-uploads/",
+    "region": "us-east-1"
+  },
+  "fromSources": [
+    "facebook",
+    "instagram",
+    "googledrive",
+    "dropbox",
+    "github",
+    "gmail",
+    "picasa",
+    "onedrive",
+    "onedriveforbusiness",
+    "clouddrive"
+  ],
+  "uploadInBackground": false
+};
+
+picker = this.client.picker(options);
+picker.open();
 }
