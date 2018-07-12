@@ -129,7 +129,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "Reservez un ticket",
                     "subtitle": "Choisir sa banque",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/12/13/17/18/fax-1904644_960_720.jpg",
+                    "image_url": "https://res.cloudinary.com/hogfzgl4g/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1531427846/qrcode_piece_perdu.png",
                     "buttons": [{
                         "type": "postback",
                         "title": "Coris Bank",
