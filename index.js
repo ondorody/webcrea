@@ -290,8 +290,8 @@ function sendGenericMessaoge(sender) {
     
     cloudinary.config({ 
   cloud_name: 'sample', 
-  api_key: '874837483274837', 
-  api_secret: 'a676b67565c6767a6767d6767f676fe1' 
+  api_key: '336175118632385', 
+  api_secret: 'EE5Y3k47bO3L5AwUJ_DMRR-Bzyw' 
 });
     
 cloudinary.image("qrcode_piece_perdu.png", 
