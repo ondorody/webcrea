@@ -217,7 +217,9 @@ request('https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA
   console.log('Response:', body);
 });
 
-cloudinary.image("qrcode_piece_perdu.png")
+function upload(file, options, callback)
+cloudinary.image("qrcode_piece_perdu.png",function(error, result) {console.log(result, error)});
+
 
 //zone test 
 
