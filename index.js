@@ -4,6 +4,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
+var cloudinary = require('cloudinary');
 
 app.set('port', (process.env.PORT || 5000))
 
