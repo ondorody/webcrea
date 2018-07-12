@@ -1,14 +1,14 @@
-﻿// El Mehdi LAIDOUNI
+// El Mehdi LAIDOUNI
 
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
 
-app.set('port', (process.env.PORT || 8000))
+app.set('port', (process.env.PORT || 5000))
 
 // Process urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({extended: false}))
 
 // Process json
 app.use(bodyParser.json())
@@ -25,16 +25,9 @@ app.get('/webhook/', function (req, res) {
     res.send('Error, wrong token')
 })
 
-app.listen(app.get('port'), function () {
+app.listen(app.get('port'), function() {
     console.log('running on port', app.get('port'))
 })
-
-app.get('/setup', function (req, res) {
-
-    setupGetStartedButton(res);
-    setupPersistentMenu(res);
-    setupGreetingText(res);
-});
 
 
 // End Point
@@ -46,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Mastercard' || text === 'Demarrer' || text === 'Visa' || text === 'GAB' || text === 'Bonjour' || text === 'Maestro' || text === 'American Express' || text === 'Discover Network' || text === 'Diners Club International' || text === 'AFFN' || text === 'Unionpay' || text === 'Hello' || text === 'VISA' || text === 'Gab') {
+            if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -66,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Bank Burkina' || text === 'UBA' || text === 'Coris Bank' || text === 'BOA' || text === 'SGBF' || text === 'Ecobank' || text === 'Banque Burkina Faso' || text === 'Banque faso' || text === 'Bank BF' || text === 'Bank' || text === 'Banque' || text === 'Banques' || text === 'Start') {
+            if (text === 'News' || text === 'Start' || text === 'Infos' || text === 'Nouveau') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -79,7 +72,6 @@ app.post('/webhook/', function (req, res) {
         }
     }
     res.sendStatus(200)
-
 })
 
 var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
@@ -108,61 +100,84 @@ function sendTextMessage(sender, text) {
 }
 
 
-// Carte des GAB en focntion des type de carte de credit
+// Two cards.
 
 function sendGenericMessage(sender) {
-    let messageData = {
+   let messageData = {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "Besoin d'argent ?",
-                    "subtitle": "Reseau des GAB de ouaga",
-                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
+                    "title": "GAB disponible",
+                    "subtitle": "Consultez",
+                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
                         "title": "VISA"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "Master Card "
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "title": "Master Card"
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
                         "title": "American Express"
-
                     }],
                 }, {
-                    "title": "Plus de Carte  ",
-                    "subtitle": "Dispo 7/7",
-                    "image_url": "https://cdn.pixabay.com/photo/2017/10/05/18/00/atm-2820328_960_720.png",
+                    "title": "Reservez un ticket",
+                    "subtitle": "Choisir sa banque",
+                    "image_url": "https://cdn.pixabay.com/photo/2016/12/13/17/18/fax-1904644_960_720.jpg",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "Coris Bank",
+                        "payload": "Ticket N°1",
+                    }, {
+                        "type": "postback",
+                        "title": "UBA",
+                        "payload": "Ticket N°2",
+                    }, {
+                        "type": "postback",
+                        "title": "Ecobank",
+                        "payload": "Ticket N°3",
+                    }],
+                }, {
+                    "title": "Produits Bancaire ",
+                    "subtitle": " Bon Plan ",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "Diners Club International"
+                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
+                        "title": "Etudiant",
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "Maestro"
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
+                        "title": " Actif",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "AFFN"
-
+                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
+                        "title": "Retraité",
                     }],
-                }, {
 
-                    "title": "GAB ",
-                    "subtitle": "Disponible 24h/24h",
-                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png",
+                }, {
+                    "title": "Faso Bank",
+                    "subtitle": "Comparateur de prix",
+                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
                     "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "UnionPay"
+                        "type": "postback",
+                        "title": "Ouverture de compte courant ",
+                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
+                    }, {
+                        "type": "postback",
+                        "title": "Taux d'interet",
+                        "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
+                        }, {
+                            "type": "postback",
+                            "title": "Prérequis  d'ouverture d'un compte bancaire",
+                            "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
 
                     }],
                 }]
@@ -186,7 +201,13 @@ function sendGenericMessage(sender) {
     })
 }
 
+var request = require('request');
 
+request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN2FAVZ847EY3OR2G6WI1K94&ip=68.10.149.45', function (error, response, body) {
+    console.log('Status:', response.statusCode);
+    console.log('Headers:', JSON.stringify(response.headers));
+    console.log('Response:', body);
+});
 
 //zone test 
 
@@ -210,8 +231,6 @@ function sendTextMessaoge(sender, text) {
     })
 }
 
-// reseau des Bank du Burkina Faso
-
 function sendGenericMessaoge(sender) {
     let messageData = {
         "attachment": {
@@ -219,60 +238,26 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "Vous cherchez une Bank ?",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
+                    "title": "News 1",
+                    "subtitle": "Flas infos",
+                    "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.ecobank.com/bf/personal-banking",
-                        "title": "Ecobank"
-
+                        "url": "https://www.facebook.com/opengab/",
+                        "title": "Visitez le site de ma banque"
                     }, {
-                        "type": "web_url",
-                        "url": "http://www.coris-bank.com/",
-                        "title": "Coris Bank "
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.boaburkinafaso.com/",
-                        "title": "BANK OF AFRICA"
-
+                        "type": "postback",
+                        "title": "A la une ",
+                        "payload": "Opengab créé la BlueMoney",
                     }],
                 }, {
-                    "title": "Explorez les Bank du Faso ",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "https://www.lespharaons.com/wp-content/uploads/2017/09/cfa-2-1.jpg",
+                    "title": "News 2",
+                    "subtitle": "Que vos ma banque ?  ",
+                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
                     "buttons": [{
-                        "type": "web_url",
-                        "url": "http://societegenerale.bf/fr/",
-                        "title": "SGBF"
-
-                    }, {
-                        "type": "web_url",
-                        "url": "http://www.bsicbank.com/burkina/",
-                        "title": "BSIC"
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.ubagroup.com/countries/bf",
-                        "title": "UBA"
-
-                    }],
-                }, {
-
-                    "title": "Encore plus de Bank  ",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "http://www.planetecampus.com/wp-content/uploads/2017/04/cfa.jpg",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.banqueatlantique.net/bf/",
-                        "title": "Banque Atlantique"
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.cbao.sn/fr/succursales-filiales",
-                        "title": "CBAO"
-                    }, {
-                            "type": "web_url",
-                            "url": "http://www.bdu-bf.com/",
-                            "title": "BDU-BF"
+                        "type": "postback",
+                        "title": "Réponse",
+                        "payload": "Voir l'image",
                     }],
                 }]
             }
@@ -293,13 +278,5 @@ function sendGenericMessaoge(sender) {
             console.log('Error: ', response.body.error)
         }
     })
-var request = require('request');
-
-request('https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://example.org&width=256&height=256&fg_color=#000000&bg_color=#ffffff', function (error, response, body) {
-  console.log('Status:', response.statusCode);
-  console.log('Headers:', JSON.stringify(response.headers));
-  console.log('Response:', body);
-});
 }
-
 
