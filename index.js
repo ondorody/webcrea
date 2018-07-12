@@ -286,4 +286,13 @@ function sendGenericMessaoge(sender) {
             console.log('Error: ', response.body.error)
         }
     })
+cloudinary.image("qrcode_piece_perdu.png", 
+             {
+              secure: true, transformation: [
+                { width: 150, height: 150, crop: 'thumb', gravity: 'face', radius: 20, effect: 'sepia' },
+                { overlay: 'cloudinary_icon', gravity: 'south_east', x: 5, y: 5, opacity: 60, 
+                    effect: 'brightness:200' },
+                { angle: 10 }                  
+              ]
+             })
 }
