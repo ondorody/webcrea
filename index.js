@@ -111,10 +111,10 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "GAB disponible",
                     "subtitle": "Consultez",
-                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
+                    "image_url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
                         "title": "VISA"
 
                     }, {
