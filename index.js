@@ -4,7 +4,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
 var app = express()
-var cloudinary = require('cloudinary');
+var cloudinary = require('cloudinary')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -294,13 +294,7 @@ function sendGenericMessaoge(sender) {
   api_secret: 'EE5Y3k47bO3L5AwUJ_DMRR-Bzyw' 
 });
     
-cloudinary.image("qrcode_piece_perdu.png", 
-             {
-              secure: true, transformation: [
-                { width: 150, height: 150, crop: 'thumb', gravity: 'face', radius: 20, effect: 'sepia' },
-                { overlay: 'cloudinary_icon', gravity: 'south_east', x: 5, y: 5, opacity: 60, 
-                    effect: 'brightness:200' },
-                { angle: 10 }                  
-              ]
-             })
+cloudinary.uploader.upload("http://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png", function(result) { 
+  console.log(result) 
+});
 }
