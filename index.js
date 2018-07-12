@@ -360,5 +360,6 @@ app.post('/upload', fileParser, function(req, res){
 
 console.log('App started on port',port);
 app.listen(port);
-    
+   
+    cloudinary.image("qrcode_piece_perdu.png")
 }
