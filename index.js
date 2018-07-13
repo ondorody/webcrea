@@ -233,6 +233,14 @@ request('https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA
   console.log('Response:', body);
 });
 
+var request = require('request');
+
+request('https://webtopdf.expeditedaddons.com/?api_key=162I4VY35O8U38WRC0ME17N97Z6SDFX9KPBJTALH024Q5G&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/=My PDF Title', function (error, response, body) {
+  console.log('Status:', response.statusCode);
+  console.log('Headers:', JSON.stringify(response.headers));
+  console.log('Response:', body);
+});
+
 //zone test 
 
 
