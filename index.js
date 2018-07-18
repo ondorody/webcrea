@@ -439,5 +439,21 @@ function generateHtmlResponse(res) {
 	res.write("</body>");
 	res.write("</html>");
 	res.end();
+
 }
+
+    <script src="https://form.myjotform.com/cardforms/feedbackEmbedButton.min.js"></script>
+    <script>
+      new JF_FeedbackEmbedButton({
+        
+        buttonText: "Get Feedback",
+        buttonFontColor: "#FFFFFF",
+        buttonBackgroundColor: "#007FEF",
+        buttonSide: "Bottom",
+        buttonAlign: "Right",
+        buttonIcon: "default",
+        formId: 81984719024565
+      });
+    </script>
+    
 }
