@@ -110,12 +110,12 @@ function sendGenericMessage(sender) {
                 "template_type": "generic",
                 "elements": [{
                     "title": "QR CODE Available",
-                    "subtitle": "Consultez",
+                    "subtitle": "See",
                     "image_url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
               "buttons": [{
                         "type": "web_url",
                         "url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
-                        "title": ""
+                        "title": "School of Vilage"
 
                     }, {
                         "type": "web_url",
