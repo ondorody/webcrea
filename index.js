@@ -115,7 +115,7 @@ function sendGenericMessage(sender) {
               "buttons": [{
                         "type": "web_url",
                         "url": "http://mbyan.herokuapp.com/",
-                        "title": "School of Vilage"
+                        "title": "School of Vilage",
 
                     }, {
                         "type": "web_url",
@@ -123,7 +123,7 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "web_url",
                         "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "My House"
+                        "title": "My House",
                     }],
                 }, {
                     "title": "QR CODE Available",
