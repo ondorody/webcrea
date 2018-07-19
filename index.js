@@ -275,7 +275,7 @@ function sendGenericMessaoge(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://web.facebook.com/groups/248598409284666/",
-                        "title": "Geolocation by QR Code"
+                        "title": "Geolocation by QR Code",
                     }, {
                         "type": "postback",
                         "title": "take a picture of a place",
@@ -283,7 +283,7 @@ function sendGenericMessaoge(sender) {
                     }],
                 }, {
                     "title": "FORM",
-                    "subtitle": "Do you want to generate a QR Code for a place?  ",
+                    "subtitle": "Do you want to generate a QR Code for a place?",
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
                     "buttons": [{
                         "type": "postback",
