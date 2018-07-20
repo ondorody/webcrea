@@ -109,66 +109,67 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "QR CODE Available",
-                    "subtitle": "See",
-                    "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
+                    "title": "GAB disponible",
+                    "subtitle": "Consultez",
+                    "image_url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
               "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": "School of Vilage",
+                        "url": "https://res.cloudinary.com/hogfzgl4g/image/upload/v1531427846/qrcode_piece_perdu.png",
+                        "title": "VISA"
+
+                    }, {
+                        "type": "web_url",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "title": "Master Card"
+                    }, {
+                        "type": "web_url",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
+                        "title": "American Express"
+                    }],
+                }, {
+                    "title": "Reservez un ticket",
+                    "subtitle": "Choisir sa banque",
+                    "image_url": "https://res.cloudinary.com/hogfzgl4g/image/upload/c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1531427846/qrcode_piece_perdu.png",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "Coris Bank",
+                        "payload": "Ticket N°1",
+                    }, {
+                        "type": "postback",
+                        "title": "UBA",
+                        "payload": "Ticket N°2",
+                    }, {
+                        "type": "postback",
+                        "title": "Ecobank",
+                        "payload": "Ticket N°3",
+                    }],
+                }, {
+                    "title": "Produits Bancaire ",
+                    "subtitle": " Bon Plan ",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
+                    "buttons": [{
+                        "type": "web_url",
+                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
+                        "title": "Etudiant",
 
                     }, {
                         "type": "web_url",
                         "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
+                        "title": " Actif",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": "My House",
-                    }],
-                }, {
-                    "title": "QR CODE Available",
-                    "subtitle": "scan",
-                    "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
-                    "buttons": [{
-                        "type": "postback",
-                        "title": "text1",
-                        "payload": "Text2",
-                    }, {
-                        "type": "postback",
-                        "title": "Text3",
-                        "payload": "Text4",
-                    }, {
-                        "type": "postback",
-                        "title": "Text5",
-                        "payload": "Text6",
-                    }],
-                }, {
-                    "title": "QR CODE Available",
-                    "subtitle": "scan more",
-                    "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": "Village",
-
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": "Forest",
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg",
-                        "title": "Bad road",
+                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
+                        "title": "Retraité",
                     }],
 
                 }, {
-                    "title": "QR CODE Available",
-                    "subtitle": "scan",
-                    "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
+                    "title": "Faso Bank",
+                    "subtitle": "Comparateur de prix",
+                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Ouverture de compte courant",
-                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa",
+                        "title": "Ouverture de compte courant ",
+                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
                     }, {
                         "type": "postback",
                         "title": "Taux d'interet",
@@ -269,26 +270,26 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "Community",
-                    "subtitle": "to integrate",
+                    "title": "QR CODE MBYAN",
+                    "subtitle": "Flas infos",
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://pieceperdue.net&width=256&height=256&fg_color=#000000&bg_color=#ffffff', function (error, response, body)",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://web.facebook.com/groups/248598409284666/",
-                        "title": "Geolocation by QR Code",
+                        "url": "https://www.facebook.com/MBYAN-2057178064536577/",
+                        "title": "Geolocalisation par Qr Code"
                     }, {
                         "type": "postback",
-                        "title": "take a picture of a place",
-                        "payload": "publish in the group",
+                        "title": "A la une ",
+                        "payload": "Opengab créé la BlueMoney",
                     }],
                 }, {
-                    "title": "FORM",
-                    "subtitle": "Do you want to generate a QR Code for a place?",
-                    "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
+                    "title": "News 2",
+                    "subtitle": "Que vos ma banque ?  ",
+                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
                     "buttons": [{
                         "type": "postback",
                         "title": "Réponse",
-                        "payload": "enter generate",
+                        "payload": "Voir l'image",
                     }],
                 }]
             }
@@ -383,5 +384,60 @@ app.post('/upload', fileParser, function(req, res){
 
 console.log('App started on port',port);
 app.listen(port);
-    
+   
+/* Formulaire*/
+var http = require("http");
+
+http.createServer(function(req, res) {
+  if (req.method === "GET") {
+    generateHtmlResponse(res);
+  } if (req.method === "POST") {
+    var chunks = [];
+    req.setEncoding("utf-8");
+    req.on("data", function(chunk) {
+      chunks.push(chunk);
+    });
+    req.on("end", function(){
+      var data = chunks.join();
+      var parts = data.split("&");
+      var lastName = parts[0].split("=")[1];
+      var firstName = parts[1].split("=")[1];
+      console.log("Lastname:", lastName);
+      console.log("Firstname:", firstName);
+      generateHtmlResponse(res);
+    });
+  } else {
+    res.writeHead(500, {"Content-Type": "text/plain; charset=utf-8"});
+    res.end("Opération non supportée.");
+  }
+}).listen(3000);
+
+function generateHtmlResponse(res) {
+	res.writeHead(200, {"Content-Type" : "text/html"});
+	res.write("<!DOCTYPE html>");
+	res.write("<html>");
+	res.write("<head>");
+	res.write("<meta charset='utf-8'>");
+	res.write("<title>Enregister une personne</title>");
+	res.write("</head>");
+	res.write("<body>");
+	res.write("<form method='post' action='/'>");
+	res.write("<table>");
+  res.write("<tr><td>");
+  res.write("<label for='nom'>Nom de la personne : </label>");
+  res.write("</td><td>");
+  res.write("<input type='text' placeholder='Nom de la personne' name='nom'>");
+  res.write("</td></tr>");
+  res.write("<tr><td>");
+  res.write("<label for='prenom'>Prénom de la personne : </label>");
+  res.write("</td><td>");
+  res.write("<input type='text' placeholder='Prénom de la personne' name='prenom'>");
+  res.write("</td></tr>");
+  res.write("</table>");
+  res.write("<input type='submit' value='Envoyer'>");
+	res.write("</form>");
+	res.write("</body>");
+	res.write("</html>");
+	res.end();
+}
 }
