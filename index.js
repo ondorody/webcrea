@@ -114,15 +114,15 @@ function sendGenericMessage(sender) {
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
               "buttons": [{
                         "type": "web_url",
-                        "url": "http://mbyan.herokuapp.com/",
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
                         "title": "School of Vilage",
 
                     }, {
                         "type": "web_url",
-                        "url": "http://mbyan.herokuapp.com/",
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
                     }, {
                         "type": "web_url",
-                        "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
                         "title": "My House",
                     }],
                 }, {
@@ -144,11 +144,11 @@ function sendGenericMessage(sender) {
                     }],
                 }, {
                     "title": "QR CODE Available",
-                    "subtitle": "scan more  ",
+                    "subtitle": "scan more",
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://mbyan.herokuapp.com/",
+                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
                         "title": "Village",
 
                     }, {
@@ -157,7 +157,7 @@ function sendGenericMessage(sender) {
                         "title": "Forest",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
+                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg",
                         "title": "Bad road",
                     }],
 
@@ -167,8 +167,8 @@ function sendGenericMessage(sender) {
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc&width=256&height=256&fg_color=#000000&bg_color=#ffffff",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Ouverture de compte courant ",
-                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
+                        "title": "Ouverture de compte courant",
+                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa",
                     }, {
                         "type": "postback",
                         "title": "Taux d'interet",
@@ -269,7 +269,7 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "Community ",
+                    "title": "Community",
                     "subtitle": "to integrate",
                     "image_url": "https://qrackajack.expeditedaddons.com/?api_key=4956C3FYQSJB6PO70V9D0UA8785GHW34MKTR21NEZX2LI1&content=http://pieceperdue.net&width=256&height=256&fg_color=#000000&bg_color=#ffffff', function (error, response, body)",
                     "buttons": [{
