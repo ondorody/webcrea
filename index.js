@@ -114,16 +114,16 @@ function sendGenericMessage(sender) {
                     "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE"
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE"
                     }],
                 }, {
@@ -149,16 +149,16 @@ function sendGenericMessage(sender) {
                     "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE",
 
                     }, {
                         "type": "web_url",
-                        "url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
+                        "url": "https://mbyan.heroku.com/",
                         "title": "SUBSCRIBE",
                     }],
 
@@ -244,7 +244,7 @@ function sendGenericMessaoge(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "Ajouter une photo dans le groupe"
+                        "title": "Visit the Group"
                     }, {
                         "type": "postback",
                         "title": "ADD PICTURES",
