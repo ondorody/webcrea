@@ -111,7 +111,7 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "SUBSCRIBE",
                     "subtitle": "SUBSCRIBE",
-                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
@@ -129,7 +129,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "SUBSCRIBE",
                     "subtitle": "SUBSCRIBE",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/12/13/17/18/fax-1904644_960_720.jpg",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "postback",
                         "title": "SUBSCRIBE",
@@ -146,7 +146,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "SUBSCRIBE",
                     "subtitle": "SUBSCRIBE",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
@@ -154,7 +154,7 @@ function sendGenericMessage(sender) {
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
+                        "url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                         "title": "SUBSCRIBE",
                     }, {
                         "type": "web_url",
@@ -165,7 +165,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "SUBSCRIBE",
                     "subtitle": "SUBSCRIBE",
-                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "postback",
                         "title": "SUBSCRIBE",
@@ -238,26 +238,26 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "News 1",
-                    "subtitle": "Flas infos",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
+                    "title": "ADD PICTURES",
+                    "subtitle": "ADD PICTURES",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.facebook.com/opengab/",
-                        "title": "Visitez le site de ma banque"
+                        "url": "https://www.facebook.com/groups/248598409284666/",
+                        "title": "Ajouter une photo dans le groupe"
                     }, {
                         "type": "postback",
-                        "title": "A la une ",
-                        "payload": "Opengab créé la BlueMoney",
+                        "title": "ADD PICTURES",
+                        "payload": "ADD PICTURES",
                     }],
                 }, {
-                    "title": "News 2",
-                    "subtitle": "Que vos ma banque ?  ",
-                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
+                    "title": "ADD PICTURES",
+                    "subtitle": "ADD PICTURES",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Réponse",
-                        "payload": "Voir l'image",
+                        "title": "ADD PICTURES",
+                        "payload": "ADD PICTURES",
                     }],
                 }]
             }
