@@ -60,7 +60,7 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
             text = event.message.text
             if (text === 'geo' || text === 'Ouagadougou' || text === 'registration' || text === 'form') {
-                generateHtmlResponse(sender)
+                sendGenericMessaoge(sender)
                 continue
             }
             sendTextMessage(sender, "Bot: " + text.substring(0, 200))
