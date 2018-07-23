@@ -230,7 +230,11 @@ function sendTextMessaoge(sender, text) {
         }
     })
 }
-
+{ 
+  "get_started":{
+    "payload":"Demarrer"
+  }
+}
 function sendGenericMessaoge(sender) {
     let messageData = {
         "attachment": {
@@ -277,5 +281,6 @@ function sendGenericMessaoge(sender) {
         } else if (response.body.error) {
             console.log('Error: ', response.body.error)
         }
+ 
     })
 }
