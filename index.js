@@ -179,7 +179,7 @@ function sendGenericMessage(sender) {
                             "title": "SUBSCRIBE",
                             "payload": "SUBSCRIBE",
                         {
-                          "field": "location"
+                          "field": "location",
                         },
 
                     }],
