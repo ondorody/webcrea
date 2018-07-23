@@ -231,9 +231,6 @@ function sendTextMessaoge(sender, text) {
     })
 }
 { 
-  "get_started":{
-    "payload":"Demarrer"
-  }
 }
 function sendGenericMessaoge(sender) {
     let messageData = {
