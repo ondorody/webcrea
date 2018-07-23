@@ -178,13 +178,14 @@ function sendGenericMessage(sender) {
                             "type": "postback",
                             "title": "SUBSCRIBE",
                             "payload": "SUBSCRIBE",
+                        {
+                          "field": "location"
+                        },
 
                     }],
                 }]
             }
-       {
-  "field": "location"
-} }
+       }
     }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
