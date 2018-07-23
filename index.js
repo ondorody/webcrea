@@ -182,7 +182,9 @@ function sendGenericMessage(sender) {
                     }],
                 }]
             }
-        }
+       {
+  "field": "location"
+} }
     }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
