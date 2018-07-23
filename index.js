@@ -178,10 +178,7 @@ function sendGenericMessage(sender) {
                             "type": "postback",
                             "title": "SUBSCRIBE",
                             "payload": "SUBSCRIBE",
-                        {
-                          "field": "location",
-                        },
-
+                   
                     }],
                 }]
             }
