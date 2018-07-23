@@ -109,8 +109,8 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "The Place",
-                    "subtitle": "The Place",
+                    "title": "SUBSCRIBE",
+                    "subtitle": "SUBSCRIBE",
                     "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
@@ -170,7 +170,6 @@ function sendGenericMessage(sender) {
                         "type": "postback",
                         "title": "SUBSCRIBE",
                         "payload": "SUBSCRIBE",
-                       
                     }, {
                         "type": "postback",
                         "title": "SUBSCRIBE",
@@ -179,9 +178,9 @@ function sendGenericMessage(sender) {
                             "type": "postback",
                             "title": "SUBSCRIBE",
                             "payload": "SUBSCRIBE",
-                        
-                          
-                       
+                        {
+                          "field": "location",
+                        },
 
                     }],
                 }]
@@ -242,7 +241,17 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                "field": "location",
+                    "title": "ADD PICTURES",
+                    "subtitle": "ADD PICTURES",
+                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "buttons": [{
+                        "type": "web_url",
+                        "url": "https://www.facebook.com/groups/248598409284666/",
+                        "title": "Visit the Group"
+                    }, {
+                        "type": "postback",
+                        "title": "ADD PICTURES",
+                        "payload": "ADD PICTURES",
                     }],
                 }, {
                     "title": "ADD PICTURES",
@@ -273,4 +282,3 @@ function sendGenericMessaoge(sender) {
         }
     })
 }
-
