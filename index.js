@@ -109,8 +109,8 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "SUBSCRIBE",
-                    "subtitle": "SUBSCRIBE",
+                    "title": "The Place",
+                    "subtitle": "The Place",
                     "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
