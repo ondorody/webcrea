@@ -110,7 +110,7 @@ function sendGenericMessage(sender) {
                 "template_type": "generic",
                 "elements": [{
                     "title": "My Home",
-                    "subtitle": "My House",
+                    "subtitle": "Picture the place",
                     "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/house.jpg",
                     "buttons": [{
                         "type": "web_url",
@@ -119,12 +119,12 @@ function sendGenericMessage(sender) {
 
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE"
+                        "url": "https://form.myjotform.com/81984719024565",
+                        "title": "Got to form"
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE"
+                        "title": "Visit"
                     }],
                 }, {
                     "title": "SUBSCRIBE",
