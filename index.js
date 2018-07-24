@@ -127,56 +127,56 @@ function sendGenericMessage(sender) {
                         "title": "Visit"
                     }],
                 }, {
-                    "title": "SUBSCRIBE",
-                    "subtitle": "SUBSCRIBE",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "title": "Reference",
+                    "subtitle": "Picture reference",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "SUBSCRIBE",
-                        "payload": "SUBSCRIBE",
+                        "title": "Ouagadougou",
+                        "payload": "ZAD",
                     }, {
                         "type": "postback",
-                        "title": "SUBSCRIBE",
-                        "payload": "SUBSCRIBE",
+                        "title": "BURKINA FASO",
+                        "payload": "N°123",
                     }, {
                         "type": "postback",
-                        "title": "SUBSCRIBE",
-                        "payload": "SUBSCRIBE",
+                        "title": "WEST AFRICA",
+                        "payload": "BURKINA",
                     }],
                 }, {
-                    "title": "SUBSCRIBE",
-                    "subtitle": "SUBSCRIBE",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "title": "Maps",
+                    "subtitle": "Location",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/ouaga.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE",
+                        "url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
+                        "title": "VIEW QR CODE",
 
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE",
+                        "title": "SCAN QR CODE ",
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE",
+                        "url": "https://tinyurl.com/y85f3m8m",
+                        "title": "WEB VIEW",
                     }],
 
                 }, {
-                    "title": "SUBSCRIBE",
-                    "subtitle": "SUBSCRIBE",
+                    "title": "AUDIO",
+                    "subtitle": "Recording",
                     "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "SUBSCRIBE",
-                        "payload": "SUBSCRIBE",
+                        "title": "Indication",
+                        "payload": "Audio",
                     }, {
                         "type": "postback",
-                        "title": "SUBSCRIBE",
-                        "payload": "SUBSCRIBE",
+                        "title": "VIDEO",
+                        "payload": "Indication",
                         }, {
                             "type": "postback",
-                            "title": "SUBSCRIBE",
+                            "title": "Audio",
                             "payload": "SUBSCRIBE",
                    
                     }],
