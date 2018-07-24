@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Hello' || text === 'House' || text === 'Qrcode' || text === 'Home') {
+            if (text === 'Hello' || text === 'House' || text === 'Start' || text === 'Home') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'geo' || text === 'Ouagadougou' || text === 'registration' || text === 'form') {
+            if (text === 'Picture' || text === 'Scan' || text === 'Qrcode' || text === 'QRCODE') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -239,22 +239,22 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "ADD PICTURES",
-                    "subtitle": "ADD PICTURES",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "title": "QR CODE",
+                    "subtitle": "SCAN WEBSITE",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "Visit the Group"
+                        "title": "REJOIN the Group"
                     }, {
                         "type": "postback",
                         "title": "ADD PICTURES",
                         "payload": "ADD PICTURES",
                     }],
                 }, {
-                    "title": "ADD PICTURES",
-                    "subtitle": "ADD PICTURES",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "title": "QR CODE",
+                    "subtitle": "SCAN EXEMPLE",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705173.png",
                     "buttons": [{
                         "type": "postback",
                         "title": "ADD PICTURES",
