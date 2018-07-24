@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Hello' || text === 'Hi' || text === 'QRcode' || text === 'generate') {
+            if (text === 'Hello' || text === 'House' || text === 'Qrcode' || text === 'Home') {
                 sendGenericMessage(sender)
                 continue
             }
