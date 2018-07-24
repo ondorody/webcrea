@@ -165,7 +165,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "AUDIO",
                     "subtitle": "Recording",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
                     "buttons": [{
                         "type": "postback",
                         "title": "Indication",
