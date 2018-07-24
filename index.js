@@ -165,7 +165,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "AUDIO",
                     "subtitle": "Recording",
-                    "audio_mp4": "http://geolocbyqrcode.yo.fr/wp-content/uploads/2018/06/record20180630022207-1.mp4",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
                     "buttons": [{
                         "type": "postback",
                         "title": "Indication",
