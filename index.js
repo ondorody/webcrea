@@ -109,13 +109,13 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "SUBSCRIBE",
-                    "subtitle": "SUBSCRIBE",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/09/19/17/02/map-947471_960_720.jpg",
+                    "title": "My Home",
+                    "subtitle": "My House",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/house.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
-                        "title": "SUBSCRIBE"
+                        "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
+                        "title": "See more"
 
                     }, {
                         "type": "web_url",
