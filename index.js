@@ -257,7 +257,7 @@ function sendGenericMessaoge(sender) {
                     "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705173.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "ADD PICTURES",
+                        "title": "SCAN BOT",
                         "payload": "ADD PICTURES",
                     }],
                 }]
