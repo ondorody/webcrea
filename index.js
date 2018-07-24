@@ -132,16 +132,16 @@ function sendGenericMessage(sender) {
                     "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
                     "buttons": [{
                         "type": "postback",
+                        "title": "Station Shell",
+                        "payload": "Name of Reference",
+                    }, {
+                        "type": "postback",
                         "title": "Ouagadougou",
-                        "payload": "ZAD",
+                        "payload": "City",
                     }, {
                         "type": "postback",
-                        "title": "BURKINA FASO",
-                        "payload": "N°123",
-                    }, {
-                        "type": "postback",
-                        "title": "WEST AFRICA",
-                        "payload": "BURKINA",
+                        "title": "Burkina Faso",
+                        "payload": "Contry",
                     }],
                 }, {
                     "title": "Maps",
@@ -165,7 +165,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "AUDIO",
                     "subtitle": "Recording",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
+                    "audio_mp4": "http://geolocbyqrcode.yo.fr/wp-content/uploads/2018/06/record20180630022207-1.mp4",
                     "buttons": [{
                         "type": "postback",
                         "title": "Indication",
