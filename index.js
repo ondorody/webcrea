@@ -128,7 +128,7 @@ function sendGenericMessage(sender) {
                     }],
                 }, {
                     "title": "Reference",
-                    "subtitle": "Picture reference",
+                    "subtitle": "remarkable identity",
                     "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
                     "buttons": [{
                         "type": "postback",
