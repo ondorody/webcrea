@@ -163,12 +163,12 @@ function sendGenericMessage(sender) {
                     }],
 
                 }, {
-                    "title": "AUDIO",
-                    "subtitle": "Recording",
+                    "title": "RECORDING",
+                    "subtitle": "Audio indication",
                     "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Indication",
+                        "title": "LISTEN",
                         "payload": "Audio",
                     }, {
                         "type": "postback",
@@ -176,7 +176,7 @@ function sendGenericMessage(sender) {
                         "payload": "Indication",
                         }, {
                             "type": "postback",
-                            "title": "Audio",
+                            "title": "RECORDING",
                             "payload": "SUBSCRIBE",
                    
                     }],
