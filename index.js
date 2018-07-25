@@ -123,7 +123,7 @@ function sendGenericMessage(sender) {
                         "title": "Got to form"
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
+                        "url": "https://mbyan.herokuapp.com/",
                         "title": "Visit"
                     }],
                 }, {
