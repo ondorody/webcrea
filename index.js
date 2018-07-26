@@ -245,7 +245,7 @@ function sendGenericMessaoge(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "REJOIN the Group"
+                        "title": "Our Group"
                     }, {
                         "type": "postback",
                         "title": "ADD PICTURES",
