@@ -177,7 +177,7 @@ function sendGenericMessage(sender) {
                         }, {
                             "type": "postback",
                             "title": "RECORDING",
-                            "payload": "SUBSCRIBE",
+                            "payload": "Indication",
                    
                     }],
                 }]
