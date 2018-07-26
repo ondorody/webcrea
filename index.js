@@ -115,7 +115,7 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See more"
+                        "title": "See"
 
                     }, {
                         "type": "web_url",
