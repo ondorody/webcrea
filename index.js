@@ -140,7 +140,7 @@ function sendGenericMessage(sender) {
                         "payload": "City",
                     }, {
                         "type": "postback",
-                        "title": "Burkina Faso",
+                        "title": "Burkina",
                         "payload": "Contry",
                     }],
                 }, {
