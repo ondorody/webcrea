@@ -29,6 +29,8 @@ app.listen(app.get('port'), function() {
     console.log('running on port', app.get('port'))
 })
 
+console.log ("HELLO");
+
 
 // End Point
 
@@ -39,7 +41,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Menu' || text === 'Demarrer' || text === 'Bank' || text === 'GAB') {
+            if (text === 'Hello' || text === 'Mbyan' || text === 'hello' || text === 'mbyan') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -59,7 +61,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'News' || text === 'Start' || text === 'Infos' || text === 'Nouveau') {
+            if (text === 'Picture' || text === 'Scan' || text === 'Qrcode' || text === 'QRCODE') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -74,7 +76,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
+var token = "EAAR7rXLj81wBAJ99zHQTjUiprkvtoWH4gyz9NeN6mpXC11x5FhmaZB4uquDk3DfCGvGbcVoWwlhM1da6Ws8nqxZBrxeriPBuCPkvvPWpgpqp3hprNBudRZAMdZBTXLBfFVGsMjG5gU1XWnOas4LNxGO0ZAqSymdXangRlg5tbCfaN8eDFMbnd"
 
 // Echo back messages
 
@@ -109,80 +111,80 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "GAB disponible",
-                    "subtitle": "Consultez",
-                    "image_url": "https://www.comparatif-carte-de-credit.be/img/american-express-mastercard-visa-logo.jpg",
+                    "title": "My Home",
+                    "subtitle": "Picture the place",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/house.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "VISA"
+                        "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
+                        "title": "See",
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+UBA&npsic=0&rflfq=1&rlha=0&rllag=12349389,-1513259,1458&tbm=lcl&ved=0ahUKEwjsqdSW-d7ZAhVLq1kKHYr_Ah8QjGoITQ&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20055.420460186306!2d-1.5111939!3d12.355461900000002!2m3!1f0!2f0!3f0!3m2!1i348!2i494!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "Master Card"
+                        "url": "https://form.myjotform.com/81984719024565",
+                        "title": "Got to form",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+ECOBANK&npsic=0&rflfq=1&rlha=0&rllag=12362415,-1481037,1731&tbm=lcl&ved=0ahUKEwiYq7PA-d7ZAhUuwlkKHcxNCRUQjGoITg&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d23222.20425482326!2d-1.4940682!3d12.353902249999999!2m3!1f0!2f0!3f0!3m2!1i289!2i286!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4",
-                        "title": "American Express"
+                        "url": "https://mbyan.herokuapp.com/",
+                        "title": "Visit",
                     }],
                 }, {
-                    "title": "Reservez un ticket",
-                    "subtitle": "Choisir sa banque",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/12/13/17/18/fax-1904644_960_720.jpg",
+                    "title": "Reference",
+                    "subtitle": "remarkable identity",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Coris Bank",
-                        "payload": "Ticket N°1",
+                        "title": "Station Shell",
+                        "payload": "Name of Reference",
                     }, {
                         "type": "postback",
-                        "title": "UBA",
-                        "payload": "Ticket N°2",
+                        "title": "Ouagadougou",
+                        "payload": "City",
                     }, {
                         "type": "postback",
-                        "title": "Ecobank",
-                        "payload": "Ticket N°3",
+                        "title": "Burkina",
+                        "payload": "Contry",
                     }],
                 }, {
-                    "title": "Produits Bancaire ",
-                    "subtitle": " Bon Plan ",
-                    "image_url": "https://cdn.pixabay.com/photo/2015/11/23/10/52/ec-1058106_960_720.png",
+                    "title": "Maps",
+                    "subtitle": "Location",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/ouaga.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://anfo44.files.wordpress.com/2017/01/bourse-logement-pour-2013-2014-l-gpi-w600h450zc1.jpg",
-                        "title": "Etudiant",
+                        "url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
+                        "title": "VIEW QR CODE",
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.boursedescredits.com/pics/data/guides/images/924-650x320.jpg",
-                        "title": " Actif",
+                        "url": "https://mbyan.heroku.com/",
+                        "title": "SCAN QR CODE ",
                     }, {
                         "type": "web_url",
-                        "url": "https://www.sicavonline.fr/images/news/536553_1.jpg ",
-                        "title": "Retraité",
+                        "url": "https://tinyurl.com/y85f3m8m",
+                        "title": "WEB VIEW",
                     }],
 
                 }, {
-                    "title": "Faso Bank",
-                    "subtitle": "Comparateur de prix",
-                    "image_url": "https://choisir-sa-banque-en-ligne.info/wp-content/uploads/2016/10/Capture-d%E2%80%99e%CC%81cran-2016-10-29-a%CC%80-15.13.22-285x300.png",
+                    "title": "RECORDING",
+                    "subtitle": "Audio indication",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Ouverture de compte courant ",
-                        "payload": "Compte courant: Coris Bank: 10.000 fcfa---SGBF: Gratuit---UBA: 10.000fcfa ",
+                        "title": "LISTEN",
+                        "payload": "Audio",
                     }, {
                         "type": "postback",
-                        "title": "Taux d'interet",
-                        "payload": "Coris Bank: A%--- SGBF: B%--- UBA: C%",
+                        "title": "VIDEO",
+                        "payload": "Indication",
                         }, {
                             "type": "postback",
-                            "title": "Prérequis  d'ouverture d'un compte bancaire",
-                            "payload": "Coris Bank: A -- SGBF: B -- UBA: C",
-
+                            "title": "RECORDING",
+                            "payload": "Indication",
+                   
                     }],
                 }]
             }
-        }
+       }
     }
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -230,7 +232,8 @@ function sendTextMessaoge(sender, text) {
         }
     })
 }
-
+{ 
+}
 function sendGenericMessaoge(sender) {
     let messageData = {
         "attachment": {
@@ -238,26 +241,26 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "News 1",
-                    "subtitle": "Flas infos",
-                    "image_url": "https://cdn.pixabay.com/photo/2016/11/11/07/50/board-1815980_960_720.jpg",
+                    "title": "QR CODE",
+                    "subtitle": "SCAN WEBSITE",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.facebook.com/opengab/",
-                        "title": "Visitez le site de ma banque"
+                        "url": "https://www.facebook.com/groups/248598409284666/",
+                        "title": "Our Group",
                     }, {
                         "type": "postback",
-                        "title": "A la une ",
-                        "payload": "Opengab créé la BlueMoney",
+                        "title": "ADD PICTURES",
+                        "payload": "ADD PICTURES",
                     }],
                 }, {
-                    "title": "News 2",
-                    "subtitle": "Que vos ma banque ?  ",
-                    "image_url": "https://www.les-crises.fr/wp-content/uploads/2013/03/21-composition-systeme-bancaire-fr.jpg",
+                    "title": "QR CODE",
+                    "subtitle": "SCAN EXEMPLE",
+                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705173.png",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Réponse",
-                        "payload": "Voir l'image",
+                        "title": "SCAN BOT",
+                        "payload": "ADD PICTURES",
                     }],
                 }]
             }
@@ -277,6 +280,6 @@ function sendGenericMessaoge(sender) {
         } else if (response.body.error) {
             console.log('Error: ', response.body.error)
         }
+ 
     })
 }
-
