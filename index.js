@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Hello' || text === 'Mbyan' || text === 'Go' || text === 'mbyan') {
+            if (text === 'Hello' || text === 'Mbyan' || text === 'hello' || text === 'mbyan') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -115,12 +115,12 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See"
+                        "title": "See",
 
                     }, {
                         "type": "web_url",
                         "url": "https://form.myjotform.com/81984719024565",
-                        "title": "Got to form"
+                        "title": "Got to form",
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.herokuapp.com/",
@@ -245,7 +245,7 @@ function sendGenericMessaoge(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "Our Group"
+                        "title": "Our Group",
                     }, {
                         "type": "postback",
                         "title": "ADD PICTURES",
