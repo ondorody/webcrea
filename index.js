@@ -117,7 +117,7 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See",
+                        "title": "See"
 
                     }, {
                         "type": "web_url",
@@ -126,7 +126,7 @@ function sendGenericMessage(sender) {
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.herokuapp.com/",
-                        "title": "Visit",
+                        "title": "Visit"
                     }],
                 }, {
                     "title": "Reference",
@@ -152,16 +152,16 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
-                        "title": "VIEW QR CODE",
+                        "title": "VIEW QR CODE"
 
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.heroku.com/",
-                        "title": "SCAN QR CODE ",
+                        "title": "SCAN QR CODE "
                     }, {
                         "type": "web_url",
                         "url": "https://tinyurl.com/y85f3m8m",
-                        "title": "WEB VIEW",
+                        "title": "WEB VIEW"
                     }],
 
                 }, {
@@ -247,7 +247,7 @@ function sendGenericMessaoge(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "Our Group",
+                        "title": "Our Group"
                     }, {
                         "type": "postback",
                         "title": "ADD PICTURES",
