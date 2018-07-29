@@ -1,7 +1,7 @@
 {
   "name": "facebotmsg",
   "version": "1.0.0",
-  "description": "creer un bot facebook messenger",
+  "description": "Hello Mbyan",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
