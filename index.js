@@ -115,12 +115,12 @@ function sendGenericMessage(sender) {
                     "buttons": [{
                         "type": "web_url",
                         "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See",
+                        "title": "See"
 
                     }, {
                         "type": "web_url",
                         "url": "https://form.myjotform.com/81984719024565",
-                        "title": "Got to form",
+                        "title": "Got to form"
                     }, {
                         "type": "web_url",
                         "url": "https://mbyan.herokuapp.com/",
