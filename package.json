@@ -2,6 +2,7 @@
   "name": "facebotmsg",
   "version": "1.0.0",
   "description": "Hello Mbyan",
+    "npm": "5.7.1"
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
