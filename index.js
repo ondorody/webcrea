@@ -76,7 +76,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = "EAAR7rXLj81wBAJ99zHQTjUiprkvtoWH4gyz9NeN6mpXC11x5FhmaZB4uquDk3DfCGvGbcVoWwlhM1da6Ws8nqxZBrxeriPBuCPkvvPWpgpqp3hprNBudRZAMdZBTXLBfFVGsMjG5gU1XWnOas4LNxGO0ZAqSymdXangRlg5tbCfaN8eDFMbnd"
+var token = "EAAR7rXLj81wBAHq8C1zJoXQAwZBYEjreZCkSpwcBq60K8rAc3y4nqoeYwKHXsv03b01VktAmrDg77tmZBTcWHRosnwqZB7TSuEUiYSYhpj8764SdunWOkglqvSl11yrVZC08ergJrpn5N7wQeHeUM8GIAgwTG0yq5FkVcIlVBxQZDZD"
 
 // Echo back messages
 
