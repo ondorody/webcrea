@@ -123,7 +123,7 @@ function sendGenericMessage(sender) {
                         "title": "remarkable identity "
                     }, {
                         "type": "web_url",
-                        "url": "https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_960_720.png",
+                        "url": "https://youtu.be/bRnpIwH6QaY",
                         "title": "Audio indication"
 
                     }],
@@ -142,7 +142,7 @@ function sendGenericMessage(sender) {
                         "title": "Maps"
                     }, {
                         "type": "web_url",
-                        "url": "https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_960_720.png",
+                        "url": "https://youtu.be/bRnpIwH6QaY",
                         "title": "Audio indication"
 
                     }],
@@ -158,7 +158,7 @@ function sendGenericMessage(sender) {
                         
                         }, {
                         "type": "web_url",
-                        "url": "https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_960_720.png",
+                        "url": "https://youtu.be/bRnpIwH6QaY",
                         "title": "Audio indication"
                     }, {
                         "type": "web_url",
