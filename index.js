@@ -29,8 +29,6 @@ app.listen(app.get('port'), function() {
     console.log('running on port', app.get('port'))
 })
 
-console.log ("HELLO");
-
 
 // End Point
 
@@ -41,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Hello' || text === 'Mbyan' || text === 'hello' || text === 'mbyan') {
+            if (text === 'Mastercard' || text === 'Demarrer' || text === 'Visa' || text === 'GAB' || text === 'Bonjour' || text === 'Maestro' || text === 'American Express' || text === 'Discover Network' || text === 'Diners Club International' || text === 'AFFN' || text === 'Unionpay' || text === 'Hello' || text === 'VISA' || text === 'Gab') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -61,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Picture' || text === 'Scan' || text === 'Qrcode' || text === 'QRCODE') {
+            if (text === 'Bank Burkina' || text === 'UBA' || text === 'Coris Bank' || text === 'BOA' || text === 'SGBF' || text === 'Ecobank' || text === 'Banque Burkina Faso' || text === 'Banque faso' || text === 'Bank BF') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -102,92 +100,69 @@ function sendTextMessage(sender, text) {
 }
 
 
-// Two cards.
+// Carte des GAB en focntion des type de carte de credit
 
 function sendGenericMessage(sender) {
-   let messageData = {
+    let messageData = {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "My Home",
-                    "subtitle": "Picture the place",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/house.jpg",
+                    "title": "Besoin d'argent ?",
+                    "subtitle": "Reseau des GAB de ouaga",
+                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "VISA"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://form.myjotform.com/81984719024565",
-                        "title": "Got to form",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Master Card "
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.herokuapp.com/",
-                        "title": "Visit",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "American Express"
+
                     }],
                 }, {
-                    "title": "Reference",
-                    "subtitle": "remarkable identity",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
-                    "buttons": [{
-                        "type": "postback",
-                        "title": "Station Shell",
-                        "payload": "Name of Reference",
-                    }, {
-                        "type": "postback",
-                        "title": "Ouagadougou",
-                        "payload": "City",
-                    }, {
-                        "type": "postback",
-                        "title": "Burkina",
-                        "payload": "Contry",
-                    }],
-                }, {
-                    "title": "Maps",
-                    "subtitle": "Location",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/ouaga.jpg",
+                    "title": "Plus de Carte  ",
+                    "subtitle": "Dispo 7/7",
+                    "image_url": "https://i.ytimg.com/vi/Bs_PoK6vOno/maxresdefault_live.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
-                        "title": "VIEW QR CODE",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Diners Club International"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.heroku.com/",
-                        "title": "SCAN QR CODE ",
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Maestro"
                     }, {
                         "type": "web_url",
-                        "url": "https://tinyurl.com/y85f3m8m",
-                        "title": "WEB VIEW",
-                    }],
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "AFFN"
 
+                    }],
                 }, {
-                    "title": "RECORDING",
-                    "subtitle": "Audio indication",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/voicememos.png",
+
+                    "title": "GAB ",
+                    "subtitle": "Disponible 24h/24h",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png",
                     "buttons": [{
-                        "type": "postback",
-                        "title": "LISTEN",
-                        "payload": "Audio",
-                    }, {
-                        "type": "postback",
-                        "title": "VIDEO",
-                        "payload": "Indication",
-                        }, {
-                            "type": "postback",
-                            "title": "RECORDING",
-                            "payload": "Indication",
-                   
+                        "type": "web_url",
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "title": "UnionPay"
+
                     }],
                 }]
             }
-       }
+        }
     }
     request({
-        url: 'https://graph.facebook.com/v2.12/me/messages',
+        url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
         method: 'POST',
         json: {
@@ -217,7 +192,7 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
 function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
     request({
-        url: 'https://graph.facebook.com/v2.12/me/messages',
+        url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: token },
         method: 'POST',
         json: {
@@ -232,8 +207,9 @@ function sendTextMessaoge(sender, text) {
         }
     })
 }
-{ 
-}
+
+// reseau des Bank du Burkina Faso
+
 function sendGenericMessaoge(sender) {
     let messageData = {
         "attachment": {
@@ -241,33 +217,68 @@ function sendGenericMessaoge(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "QR CODE",
-                    "subtitle": "SCAN WEBSITE",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
+                    "title": "Vous cherchez une Bank ?",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.facebook.com/groups/248598409284666/",
-                        "title": "Our Group",
+                        "url": "https://www.ecobank.com/bf/personal-banking",
+                        "title": "Ecobank"
+
                     }, {
-                        "type": "postback",
-                        "title": "ADD PICTURES",
-                        "payload": "ADD PICTURES",
+                        "type": "web_url",
+                        "url": "http://www.coris-bank.com/",
+                        "title": "Coris Bank "
+                    }, {
+                        "type": "web_url",
+                        "url": "https://www.boaburkinafaso.com/",
+                        "title": "BANK OF AFRICA"
+
                     }],
                 }, {
-                    "title": "QR CODE",
-                    "subtitle": "SCAN EXEMPLE",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705173.png",
+                    "title": "Explorez les Bank du Faso ",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "https://www.lespharaons.com/wp-content/uploads/2017/09/cfa-2-1.jpg",
                     "buttons": [{
-                        "type": "postback",
-                        "title": "SCAN BOT",
-                        "payload": "ADD PICTURES",
+                        "type": "web_url",
+                        "url": "http://societegenerale.bf/fr/",
+                        "title": "SGBF"
+
+                    }, {
+                        "type": "web_url",
+                        "url": "http://www.bsicbank.com/burkina/",
+                        "title": "BSIC"
+                    }, {
+                        "type": "web_url",
+                        "url": "https://www.ubagroup.com/countries/bf",
+                        "title": "UBA"
+
+                    }],
+                }, {
+
+                    "title": "Encore plus de Bank  ",
+                    "subtitle": "Reseau des Bank du Burkina",
+                    "image_url": "http://www.planetecampus.com/wp-content/uploads/2017/04/cfa.jpg",
+                    "buttons": [{
+                        "type": "web_url",
+                        "url": "https://www.banqueatlantique.net/bf/",
+                        "title": "Banque Atlantique"
+                    }, {
+                        "type": "web_url",
+                        "url": "https://www.cbao.sn/fr/succursales-filiales",
+                        "title": "CBAO"
+                    }, {
+                        "type": "web_url",
+                        "url": "http://www.bdu-bf.com/",
+                        "title": "BDU-BF"
+
                     }],
                 }]
             }
         }
     }
     request({
-        url: 'https://graph.facebook.com/v2.12/me/messages',
+        url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: token },
         method: 'POST',
         json: {
@@ -280,6 +291,53 @@ function sendGenericMessaoge(sender) {
         } else if (response.body.error) {
             console.log('Error: ', response.body.error)
         }
- 
     })
 }
+
+
+        
+
+
+
+
+
+// text pour message d'accueil 
+
+
+
+//=========================================================
+// Facebook setup // Run only when need updating.
+//=========================================================
+
+
+
+// Calls the Facebook graph api to change various bot settings
+function facebookThreadAPI(jsonFile, cmd) {
+   
+    // Set FB bot greeting text
+    facebookThreadAPI('./fb-greeting-text.json', 'Greeting Text');
+    // Set FB bot get started button
+    facebookThreadAPI('./fb-get-started-button.json', 'Get Started Button');
+    // Set FB bot persistent menu
+    facebookThreadAPI('./fb-persistent-menu.json', 'Persistent Menu');
+    // Start the request
+    var request = require('request');
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD'+process.env.FB_PAGE_ACCESS_TOKEN,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        form: require(jsonFile)
+    },
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // Print out the response body
+                console.log(cmd + ": Updated.");
+                console.log(body);
+            } else {
+                // TODO: Handle errors
+                console.log(cmd + ": Failed. Need to handle errors.");
+                console.log(body);
+            }
+        });
+}
+
