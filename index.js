@@ -153,8 +153,17 @@ function sendGenericMessage(sender) {
                     "image_url": "https://thumb1.shutterstock.com/display_pic_with_logo/1472795/354109316/stock-photo-ouagadougou-pinned-on-a-map-of-africa-354109316.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
-                        "title": "UnionPay"
+                        "url": "https://www.google.com/maps/place/Ouagadougou/data=!4m2!3m1!1s0xe2e95ecceaa44cd:0x799f67799c743b8b?sa=X&ved=2ahUKEwiTy6qkmMzcAhUHKBoKHZmABp4Q8gEwAHoECAQQAQ",
+                        "title": "See"
+                        
+                        }, {
+                        "type": "web_url",
+                        "url": "https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_960_720.png",
+                        "title": "Audio indication"
+                    }, {
+                        "type": "web_url",
+                        "url": "https://form.myjotform.com/81984719024565",
+                        "title": "Generate a qr code"
 
                     }],
                 }]
