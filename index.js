@@ -187,7 +187,7 @@ function sendGenericMessage(sender) {
        }
     }
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.12/me/messages',
         qs: {access_token:token},
         method: 'POST',
         json: {
@@ -217,7 +217,7 @@ request('https://iptoearth.expeditedaddons.com/?api_key=HTBCSM05UX6Q07389DL51JPN
 function sendTextMessaoge(sender, text) {
     let messageData = { text: text }
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.12/me/messages',
         qs: { access_token: token },
         method: 'POST',
         json: {
@@ -267,7 +267,7 @@ function sendGenericMessaoge(sender) {
         }
     }
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.12/me/messages',
         qs: { access_token: token },
         method: 'POST',
         json: {
