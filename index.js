@@ -111,11 +111,11 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "My home ?",
                     "subtitle": "Picture of the place",
-                    "image_url": "https://mbyan.herokuapp.com/content/uploads/2018/07/house.jpg",
+                    "image_url": "https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070_960_720.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "VISA"
+                        "url": "https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070_960_720.jpg",
+                        "title": "See"
 
                     }, {
                         "type": "web_url",
