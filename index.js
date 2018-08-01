@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Hello' || text === 'menu' || text === 'info' || text === 'hello' || text === 'Bonjour' || text === 'Menu' || text === 'QRCODE' || text === 'qrcode' || text === 'Start' || text === 'geolocation' || text === 'bot' || text === 'chat' || text === 'demarrer' || text === 'Gab') {
+            if (text === 'Mastercard' || text === 'Demarrer' || text === 'Visa' || text === 'GAB' || text === 'Bonjour' || text === 'Maestro' || text === 'American Express' || text === 'Discover Network' || text === 'Diners Club International' || text === 'AFFN' || text === 'Unionpay' || text === 'Hello' || text === 'VISA' || text === 'Gab') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -74,7 +74,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = "EAAR7rXLj81wBAHq8C1zJoXQAwZBYEjreZCkSpwcBq60K8rAc3y4nqoeYwKHXsv03b01VktAmrDg77tmZBTcWHRosnwqZB7TSuEUiYSYhpj8764SdunWOkglqvSl11yrVZC08ergJrpn5N7wQeHeUM8GIAgwTG0yq5FkVcIlVBxQZDZD"
+var token = "EAAR7rXLj81wBAEJmS62ZBE5stLHoeU0utxZAPnINOtXINLk6y2qvPprPSr24PYky5295bsNezPMIvF8xVIlGPQ0ZACQhiAbKt6MlzUZBoiZAE18bZBagDjzfXfZCPuv5Gylaaxzmp4MDm4wjdWRnupkcfqTjfh35AwKZA785ERJfVAZDZD"
 
 // Echo back messages
 
@@ -109,32 +109,32 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "My Home",
+                    "title": "Besoin d'argent ?",
                     "subtitle": "Reseau des GAB de ouaga",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/08/house.jpg",
+                    "image_url": "http://1.bp.blogspot.com/-wjtqcLplXa4/TlDZCs4cOlI/AAAAAAAAOkI/oKT5l_gCBWI/s1600/2990649_130736059_2.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://geolocbyqrcode.yo.fr/blog/2018/07/02/mbyan-de-luc/",
-                        "title": "See"
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "VISA"
 
                     }, {
                         "type": "web_url",
-                        "url": "https://form.myjotform.com/81984719024565",
-                        "title": "Got to form"
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Master Card "
                     }, {
                         "type": "web_url",
-                        "url": "https://mbyan.herokuapp.com/",
-                        "title": "Visit"
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "American Express"
 
                     }],
                 }, {
-                    "title": "Reference  ",
-                    "subtitle": "remarkable identity",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/reference-point.jpg",
+                    "title": "Plus de Carte  ",
+                    "subtitle": "Dispo 7/7",
+                    "image_url": "https://i.ytimg.com/vi/Bs_PoK6vOno/maxresdefault_live.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://mbyan.herokuapp.com/",
-                        "title": "Name of Reference"
+                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
+                        "title": "Diners Club International"
 
                     }, {
                         "type": "web_url",
@@ -148,13 +148,13 @@ function sendGenericMessage(sender) {
                     }],
                 }, {
 
-                    "title": "Maps ",
-                    "subtitle": "Location",
-                    "image_url": "http://mbyan.herokuapp.com/content/uploads/2018/07/ouaga.jpg",
+                    "title": "GAB ",
+                    "subtitle": "Disponible 24h/24h",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://mbyan.herokuapp.com/content/uploads/2018/07/qrcode.45705129.png",
-                        "title": "VIEW QR CODE"
+                        "url": "https://www.google.bf/search?rlz=1C1NHXL_frBF779BF779&biw=1600&bih=794&q=GAB+CORIS+BANQUE&npsic=0&rflfq=1&rlha=0&rllag=12352601%2C-1505980%2C2159&tbm=lcl&ved=0ahUKEwjls837-N7ZAhUDwFkKHRFwDxgQjGoIWQ&tbs=lrf%3A%212m4%211e17%214m2%2117m1%211e2%212m1%211e3%213sIAE%2Clf%3A1%2Clf_ui%3A3&rldoc=1#rlfi=hd:;si:;mv:!1m3!1d20786.132230519084!2d-1.5254232!3d12.356123!2m3!1f0!2f0!3f0!3m2!1i599!2i256!4f13.1;tbs:lrf:!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:3",
+                        "title": "UnionPay"
 
                     }],
                 }]
