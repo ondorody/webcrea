@@ -119,12 +119,12 @@ function sendGenericMessage(sender) {
 
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "Master Card "
+                        "url": "https://cdn.pixabay.com/photo/2016/09/03/11/45/abandoned-1641489_960_720.jpg",
+                        "title": "remarkable identity "
                     }, {
                         "type": "web_url",
-                        "url": "https://www.google.bf/maps/place/Agence+ZAD+Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale/@12.336737,-1.500755,17z/data=!3m1!4b1!4m5!3m4!1s0xe2ebdddcfcdd687:0x878e97b4174b20ee!8m2!3d12.336737!4d-1.4985663",
-                        "title": "American Express"
+                        "url": "https://cdn.pixabay.com/photo/2016/11/19/00/12/wave-1837426_960_720.png",
+                        "title": "Audio indication"
 
                     }],
                 }, {
