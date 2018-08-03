@@ -228,7 +228,7 @@ function sendGenericMessaoge(sender) {
 				"elements": [{
 					"title": "Duffy Home",
 					"subtitle": "Picture of the place",
-					"image_url": "https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070_960_720.jpg",
+					"image_url": "https://cdn.pixabay.com/photo/2017/07/24/20/08/old-farmhouse-2535919_960_720.jpg",
 					"buttons": [{
 						"type": "web_url",
 						"url": "https://www.facebook.com/geombyan/",
