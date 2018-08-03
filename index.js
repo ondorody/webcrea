@@ -236,7 +236,7 @@ function sendGenericMessaoge(sender) {
 					}, {
 						"type": "postback",
 						"title": "Read SMS",
-						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. ECOBANK is 10 minutes from home in fact. (Duffy)",
+						"payload": "Ok. When you're at EcoBank drive straight ahead until you see a bar called maquitos on your left there you beep me. ECOBANK is 10 minutes from home in fact. (Duffy)",
 					}],
 				}, {
 					"title": "Reference",
@@ -245,7 +245,7 @@ function sendGenericMessaoge(sender) {
 					"buttons": [{
 						"type": "postback",
 						"title": "Guide Message",
-						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. The bank Coris is 10 minutes from home in fact. (Duffy)",
+						"payload": "Ok. When you're at EcoBank drive straight ahead until you see a bar called maquitos on your left there you beep me. Ecobank is 10 minutes from home in fact. (Duffy)",
 					}],
 				}]
 			}
