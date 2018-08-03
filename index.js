@@ -221,67 +221,24 @@ function sendTextMessaoge(sender, text) {
 
 function sendGenericMessaoge(sender) {
     let messageData = {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "generic",
-                "elements": [{
-                    "title": "Vous cherchez une Bank ?",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "https://i1.wp.com/netafrique.net/wp-content/uploads/2016/02/banques.jpg?resize=640%2C358",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.ecobank.com/bf/personal-banking",
-                        "title": "Ecobank"
-
-                    }, {
-                        "type": "web_url",
-                        "url": "http://www.coris-bank.com/",
-                        "title": "Coris Bank "
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.boaburkinafaso.com/",
-                        "title": "BANK OF AFRICA"
-
-                    }],
-                }, {
-                    "title": "Explorez les Bank du Faso ",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "https://www.lespharaons.com/wp-content/uploads/2017/09/cfa-2-1.jpg",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "http://societegenerale.bf/fr/",
-                        "title": "SGBF"
-
-                    }, {
-                        "type": "web_url",
-                        "url": "http://www.bsicbank.com/burkina/",
-                        "title": "BSIC"
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.ubagroup.com/countries/bf",
-                        "title": "UBA"
-
-                    }],
-                }, {
-
-                    "title": "Encore plus de Bank  ",
-                    "subtitle": "Reseau des Bank du Burkina",
-                    "image_url": "http://www.planetecampus.com/wp-content/uploads/2017/04/cfa.jpg",
-                    "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.banqueatlantique.net/bf/",
-                        "title": "Banque Atlantique"
-                    }, {
-                        "type": "web_url",
-                        "url": "https://www.cbao.sn/fr/succursales-filiales",
-                        "title": "CBAO"
-                    }, {
-                        "type": "web_url",
-                        "url": "http://www.bdu-bf.com/",
-                        "title": "BDU-BF"
-                        
-                     {
+		"attachment": {
+			"type": "template",
+			"payload": {
+				"template_type": "generic",
+				"elements": [{
+					"title": "First card",
+					"subtitle": "Element #1 of an hscroll",
+					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+					"buttons": [{
+						"type": "web_url",
+						"url": "https://www.messenger.com",
+						"title": "web url"
+					}, {
+						"type": "postback",
+						"title": "Postback",
+						"payload": "Payload for first element in a generic bubble",
+					}],
+				}, {
 					"title": "Second card",
 					"subtitle": "Element #2 of an hscroll",
 					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
@@ -289,13 +246,11 @@ function sendGenericMessaoge(sender) {
 						"type": "postback",
 						"title": "Postback",
 						"payload": "Payload for second element in a generic bubble",
-}],
-
-                    }],
-                }]
-            }
-        }
-    }
+					}],
+				}]
+			}
+		}
+}
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: token },
