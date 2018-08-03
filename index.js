@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Bank Burkina' || text === 'UBA' || text === 'Coris Bank' || text === 'BOA' || text === 'SGBF' || text === 'Ecobank' || text === 'Banque Burkina Faso' || text === 'Banque faso' || text === 'Bank BF') {
+            if (text === 'Duffy' || text === 'duffy' || text === 'dufy' || text === 'Dufy' || text === 'DUFFY' || text === 'Geolocalisation' || text === 'help' || text === 'Help' || text === 'Home') {
                 sendGenericMessaoge(sender)
                 continue
             }
@@ -226,17 +226,17 @@ function sendGenericMessaoge(sender) {
 			"payload": {
 				"template_type": "generic",
 				"elements": [{
-					"title": "My Home",
+					"title": "Duffy Home",
 					"subtitle": "Picture of the place",
 					"image_url": "https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070_960_720.jpg",
 					"buttons": [{
 						"type": "web_url",
-						"url": "https://www.messenger.com",
-						"title": "web url"
+						"url": "https://www.facebook.com/geombyan/",
+						"title": "Help"
 					}, {
 						"type": "postback",
-						"title": "Postback",
-						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. The bank Coris is 10 minutes from home in fact. (Duffy)",
+						"title": "Read SMS",
+						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. ECOBANK is 10 minutes from home in fact. (Duffy)",
 					}],
 				}, {
 					"title": "Reference",
@@ -244,7 +244,7 @@ function sendGenericMessaoge(sender) {
 					"image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRovUUmxhO4cxDuoEbDCYmXN99StsE4wmQ8DxdC0TR9ZFVkG5Qm",
 					"buttons": [{
 						"type": "postback",
-						"title": "Postback",
+						"title": "Guide Message",
 						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. The bank Coris is 10 minutes from home in fact. (Duffy)",
 					}],
 				}]
