@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'hello' || text === 'Demarrer' || text === 'Hello' || text === 'hi' || text === 'Hi' || text === 'Roddy' || text === 'menu' || text === 'MENU' || text === 'Menu' || text === 'start' || text === 'Start' || text === 'mbyan' || text === 'MBYAN' || text === 'Mbyan') {
+            if (text === 'hello' || text === 'Demarrer' || text === 'Hello' || text === 'hi' || text === 'Hi' || text === 'Elza' || text === 'menu' || text === 'MENU' || text === 'Menu' || text === 'start' || text === 'Start' || text === 'mbyan' || text === 'MBYAN' || text === 'Mbyan') {
                 sendGenericMessage(sender)
                 continue
             }
