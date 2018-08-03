@@ -280,6 +280,16 @@ function sendGenericMessaoge(sender) {
                         "type": "web_url",
                         "url": "http://www.bdu-bf.com/",
                         "title": "BDU-BF"
+                        
+                     {
+					"title": "Second card",
+					"subtitle": "Element #2 of an hscroll",
+					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+					"buttons": [{
+						"type": "postback",
+						"title": "Postback",
+						"payload": "Payload for second element in a generic bubble",
+}],
 
                     }],
                 }]
