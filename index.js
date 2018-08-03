@@ -226,9 +226,9 @@ function sendGenericMessaoge(sender) {
 			"payload": {
 				"template_type": "generic",
 				"elements": [{
-					"title": "First card",
-					"subtitle": "Element #1 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+					"title": "My Home",
+					"subtitle": "Picture of the place",
+					"image_url": "https://cdn.pixabay.com/photo/2016/11/18/17/46/architecture-1836070_960_720.jpg",
 					"buttons": [{
 						"type": "web_url",
 						"url": "https://www.messenger.com",
@@ -236,16 +236,16 @@ function sendGenericMessaoge(sender) {
 					}, {
 						"type": "postback",
 						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
+						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. The bank Coris is 10 minutes from home in fact. (Duffy)",
 					}],
 				}, {
-					"title": "Second card",
-					"subtitle": "Element #2 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+					"title": "Reference",
+					"subtitle": "Remarkable identity",
+					"image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRovUUmxhO4cxDuoEbDCYmXN99StsE4wmQ8DxdC0TR9ZFVkG5Qm",
 					"buttons": [{
 						"type": "postback",
 						"title": "Postback",
-						"payload": "Payload for second element in a generic bubble",
+						"payload": "Ok. When you're at Coris Bank drive straight ahead until you see a bar called maquitos on your left there you beep me. The bank Coris is 10 minutes from home in fact. (Duffy)",
 					}],
 				}]
 			}
