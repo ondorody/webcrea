@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Bonjour, Je suis votre Facebook Messenger Bot')
+    res.send('Bienvenue sur GODRIVE')
 })
 
 app.get('/webhook/', function (req, res) {
